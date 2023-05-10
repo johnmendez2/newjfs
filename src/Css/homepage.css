@@ -1,0 +1,20 @@
+.productdisplayforhighlights {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  
+  .square {
+    width: 220px;
+    height: 250px;
+    background-color: #fff;
+    border: 2px solid #000;
+  }
+  
+  .square-content {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
