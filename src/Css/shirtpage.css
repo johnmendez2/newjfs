@@ -1,0 +1,49 @@
+@media only screen and (min-width : 992px) {
+    .squareShirtPage{
+        position: relative;
+        display: flex;
+        justify-content: center; /* center the flex items horizontally */
+        margin-left: 60px;
+        margin-top: 6.25em;
+    }
+    .square-contentShirtPage{
+        border-radius: 50px;
+        height: 550px;
+        margin-bottom: 100px;
+    }
+    
+    .productDesc{
+        margin-top: 80px;
+        max-width: 70%;
+    }
+    
+    .shirtname{
+        font-size: 50px;
+    }
+    
+    .description{
+        font-weight: 300px;
+        font-size: 20px;
+    }
+    
+    
+    .depop-btn {
+        margin-top: 20px;
+        padding: 15px 40px;
+        border-radius:3px;
+        border-color: #111111;
+        background-image: linear-gradient(to right, #000000, #000000);
+        color: rgb(255, 255, 255);
+        transition: transform 0.2s ease-in-out;
+        margin-bottom: 30px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .depop-btn:hover {
+        transition: background-image 0.2s ease-in-out, color 0.2s ease-in-out;
+        background-image: linear-gradient(to bottom, #000000, #000000);
+        color: white;
+      }
+      
+}
