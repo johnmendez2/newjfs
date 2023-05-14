@@ -1,0 +1,143 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.image-gallery {
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: relative;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+  height: 60px;
+  width: 60px;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: calc(100vh - 80px);
+  border-radius: 50px;
+}
+
+.squareShirtPage{
+    position: relative;
+    display: flex;
+    justify-content: center; /* center the flex items horizontally */
+    margin-left: 60px;
+    margin-top: 4.25em;
+  }
+  .mobileshirtimg {
+    width: 80%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+  }
+  .square-contentShirtPage{
+    border-radius: 50px;
+    height: 550px;
+    margin-bottom: 100px;
+  }
+  
+  .productDesc{
+    margin-top: 80px;
+    max-width: 70%;
+  }
+  
+  .shirtname{
+    font-size: 45px;
+  }
+  
+  .description{
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  .depop-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    border-radius:3px;
+    border-color: #111111;
+    background-image: linear-gradient(to right, #000000, #000000);
+    color: rgb(255, 255, 255);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .depop-btn:hover {
+    transition: background-image 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-image: linear-gradient(to bottom, #000000, #000000);
+    color: white;
+  }
+
+  .mobile-layout{
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .squareShirtPage {
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    
+    .square-contentShirtPage {
+      border-radius: 0;
+      height: 300px;
+      margin-bottom: 30px;
+    }
+    
+    .productDesc {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .desktop-layout{
+        display: none;
+    }
+    .mobile-layout{
+        display: block;
+    }
+    .mobile-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .square-contentShirtPage {
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+      .mobile-bottom{
+        width: 92%;
+        margin-left: 20px;
+        margin-bottom: 50px;
+      }
+      .image-gallery {
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        position: relative;
+        width: 85%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+      max-height: calc(100vh - 80px);
+      border-radius: 20px;
+  }
+  .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 45px;
+    width: 25px;
+    margin-top: 30px;
+}
+  }
+  

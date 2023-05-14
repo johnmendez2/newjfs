@@ -1,0 +1,13 @@
+.mobilefaq{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktopfaq{
+        display: none;
+    }
+    .mobilefaq{
+        display: block;
+        height: 1600px;
+    }
+}

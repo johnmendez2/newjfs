@@ -1,0 +1,39 @@
+
+.footer{
+  color: white; 
+  background-color: #4101ab; 
+  height: 167px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 36px;
+  position: static;
+  width: 100%;
+  bottom: 0;
+}
+    
+    .followtextmobile{
+      display: none;
+      
+    }
+
+
+
+  @media only screen and (max-width: 768px) {
+    .footerlottie {
+      display: none !important;
+    }
+    .instaicon{
+      margin-left: 7px;
+    }
+    .followtext{
+      display: none;
+    }
+
+    .followtextmobile{
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+  
