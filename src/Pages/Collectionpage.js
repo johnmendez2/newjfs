@@ -6,23 +6,29 @@ import Footer from "./Footer";
 import { useNavigate, useLocation } from "react-router-dom";
 import Fuse from 'fuse.js';
 import "../Css/collectionpage.css";
+import Filter from "./Filter";
 
 export default function CollectionPage() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
   const [isFetching, setIsFetching] = useState(true);
+  const [isFilterLoaded, setIsFilterLoaded] = useState(false);
+
+  const handleFilter = (filteredList) => {
+    console.log("awesome")
+  };
 
   useEffect(() => {
     const getProducts = async () => {
       let query = fs.collection("NEWwebsiteProducts");
-    
+
       // Check if league parameter is provided in the URL
       const league = location.pathname.split("/")[2];
       if (league) {
         query = query.where("league", "==", league);
       }
-    
+
       // Check if search parameter is provided in the URL
       const search = window.location.href.split("search=")[1];
       console.log(search)
@@ -32,7 +38,7 @@ export default function CollectionPage() {
           id: doc.id,
           ...doc.data()
         }));
-      
+
         const fuse = new Fuse(products, {
           keys: ['title'],
           includeScore: true,
@@ -40,7 +46,7 @@ export default function CollectionPage() {
           ignoreLocation: true,
           ignoreFieldNorm: true
         });
-      
+
         const matchingProducts = fuse.search(search).map((result) => result.item);
         setProducts(matchingProducts);
       }
@@ -52,10 +58,13 @@ export default function CollectionPage() {
           productsArray.push({ id: doc.id, ...doc.data() });
         });
         setProducts(productsArray);
-      }    
+      }
       setIsFetching(false);
+      setTimeout(() => {
+        setIsFilterLoaded(true);
+      }, 800);
     };
-    
+
     getProducts();
   }, [location]);
 
@@ -63,26 +72,27 @@ export default function CollectionPage() {
     <div>
       <Navbar />
       <div className="collection-page">
+        {isFilterLoaded && <Filter robots={products} onFilterChange={handleFilter} />}
         {isFetching ? (
           <h2>Fetching products...</h2>
         ) : (
           <>
             <h2 className="showing">Showing {products.length} {products.length > 1 ? "products" : "product"}</h2>
-                <div className="product-cards-container">
-                {products.length > 0 ? (
-              products.map((product) => (
+            <div className="product-cards-container">
+              {products.length > 0 ? (
+                products.map((product) => (
                   <ProductCard
                     key={product.id}
                     imageSrc={product.url}
                     productName={product.title}
                     price={product.price}
                     size={product.size}
-                    url = {`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                    url={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                   />
-              ))
-            ) : (
-              <h2 >Your search returned no results.</h2>
-            )}
+                ))
+              ) : (
+                <h2>Your search returned no results.</h2>
+              )}
             </div>
           </>
         )}
@@ -90,6 +100,4 @@ export default function CollectionPage() {
       <Footer />
     </div>
   );
-  
-  
 }

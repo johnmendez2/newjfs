@@ -1,0 +1,79 @@
+.filterBox {
+    width: 280px;
+    height: 400px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 10px;
+    margin: 10px auto;
+    position: absolute;
+    margin-left: -1100px;
+    border-radius:8px ;
+    color: #212121;
+    margin-top: 50px;
+  }
+
+  .filterHeading {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .filterSubheading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+  .filterIcon {
+    margin-right: 10px;
+    color: gray;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid gray;
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+
+  .filterIconSelected {
+    background-color: rgb(8, 75, 180);
+    border: none;
+    width: 25px;
+    height: 25px;
+  }
+
+  .tick {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .filterText {
+    color: black;
+    font-size: 14px;
+  }
+
+  .filterDivider {
+    border-top: 1px solid rgb(204, 204, 204);
+    margin: 10px 0;
+  }
+
+  .filterTitle {
+
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+
+
+  @media only screen and (max-width : 768px){
+    .filterBox{
+      display: none;
+    }
+  }
