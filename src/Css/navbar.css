@@ -27,8 +27,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 180px;
-        margin-left: 400px;
+        margin-left: 900px;
+        margin-right: 50px;
         cursor: 'pointer'
       }
       
@@ -36,15 +36,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-color: #f5f5f5;
         cursor: pointer;
       }
       
       .search-icon-container svg {
-        color: #333333;
+        color: #ffffff;
+        height: 20px;
       }
       
       .search-container {
@@ -136,6 +133,8 @@
         font-weight: 500;
         cursor: pointer;
       }
+
+    
       
       .collection::before {
         content: '';
@@ -151,6 +150,7 @@
       .collection:hover::before {
         width: 100%;
       }
+
       
       
       .faqs {
@@ -178,6 +178,33 @@
         width: 100%;
       }
 
+      .giveaways {
+        position: relative;
+        display: inline-block;
+        /* margin: 20px; */
+        margin-left: 20px;
+        margin-right: 500px;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .giveaways::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
+    
+    .giveaways:hover::before {
+      width: 100%;
+    }
+
       .hamburgericon{
         display: none;
       }
@@ -188,6 +215,9 @@
         display: none;
       }
       .faqs{
+        display: none;
+      }
+      .giveaways{
         display: none;
       }
       .navbar {

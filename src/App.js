@@ -4,6 +4,7 @@ import Homepage from './Pages/Homepage';
 import ShirtPage from './Pages/ShirtPage';
 import Collectionpage from './Pages/Collectionpage';
 import Faqs from './Pages/Faqs';
+import Giveaways from './Pages/Giveaways';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/products" element={<Collectionpage />} />
         <Route path="/products/:league" element={<Collectionpage />} />
         <Route path="/FAQ's" element={<Faqs />} />
+        <Route path="/giveaways" element={<Giveaways />} />
       </Routes>
     </Router>
   );

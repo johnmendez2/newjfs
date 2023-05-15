@@ -58,6 +58,9 @@ function Navbar() {
           <div className="faqs" onClick={() => navigate(`/FAQ's`)}>
             FAQ'S
           </div>
+          <div className="giveaways" onClick={() => navigate(`/giveaways`)}>
+            GIVEAWAYS
+          </div>
         <div className="hamburgericon" onClick={handleMenuClick}>
           <FontAwesomeIcon color="white" icon={faBars} height={'20px'} />
         </div>
@@ -72,6 +75,9 @@ function Navbar() {
           </div>
           <div className="faqs" onClick={() => navigate(`/FAQ's`)}>
             FAQ'S
+          </div>
+          <div className="faqs" onClick={() => navigate(`/giveaways`)}>
+            GIVEAWAYS
           </div>
         </div>
       <div className={`search-container ${searchOpen ? 'open' : ''}`}>
