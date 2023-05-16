@@ -86,7 +86,7 @@ function Homepage() {
     <div class="square" onClick={()=> navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)}>
       <img class="square-content" src={product.url} />
     </div>
-    <h1 style={{textAlign: "center", fontSize:'1.2rem'}}>{product.title}</h1>
+    <h1 style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h1>
   </div>
 ))}
 
