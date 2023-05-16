@@ -248,3 +248,42 @@
 
 
       
+      @media screen 
+      and (min-device-width: 1200px) 
+      and (max-device-width: 1600px) 
+      and (-webkit-min-device-pixel-ratio: 1) {
+        .productdisplayforhighlights {
+          flex-direction: row;
+          margin-bottom: 10px;
+          justify-content: space-between;
+          overflow: scroll;
+      }
+
+      .squareLeague {
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    .squareLeague div:last-child{
+      height: 150px;
+    }
+
+    .textinsquare{
+      font-size: 1rem !important;
+    }
+    .shopbyleague{
+      height: 340px !important;
+    }
+
+    .league-content{
+      height: 175px !important;
+    }
+
+      }

@@ -340,3 +340,16 @@
       }
     }
 
+    @media only screen and (width : 1200px) and (height: 1600px) {
+
+      .jfslogo {
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 600px;
+        margin-right: 50px;
+        cursor: 'pointer'
+      }
+
+    }

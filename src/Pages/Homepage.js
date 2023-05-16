@@ -13,7 +13,7 @@ import onPhone from '../Assets/126569-soccer-online-broadcast.json';
 
 import premlogo from "../Assets/prem.png";
 import bundesliga from "../Assets/bundesliga.png";
-import ligue1 from "../Assets/ligue1.jpg";
+import ligue1 from "../Assets/ligue1.png";
 import laliga from "../Assets/laliga.png";
 import seriea from "../Assets/seriea.png";
 
@@ -82,7 +82,7 @@ function Homepage() {
                 </h1>
                 <div class="productdisplayforhighlights">
                 {products.map((product) => (
-  <div>
+  <div style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
     <div class="square" onClick={()=> navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)}>
       <img class="square-content" src={product.url} />
     </div>
@@ -99,19 +99,19 @@ function Homepage() {
 
                 <div class="leaguecontainer">
                 <div class="squareLeague" onClick={()=> navigate(`/products/premierleague`)}>
-                    <img class="square-content" src={premlogo} style={{height:'200px'}}/>
+                    <img class="league-content" src={premlogo} style={{height:'200px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/bundesliga`)}>
-                <img class="square-content" src={bundesliga} style={{height:'200px'}}/>
+                <img class="league-content" src={bundesliga} style={{height:'200px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/ligue1`)}>
-                <img class="square-content" src={ligue1} style={{height:'180px'}}/>
+                <img class="league-content" src={ligue1} style={{height:'180px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/laliga`)}>
-                <img class="square-content" src={laliga} style={{height:'200px'}}/>
+                <img class="league-content" src={laliga} style={{height:'200px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/seriea`)}>
-                <img class="square-content" src={seriea} style={{height:'200px'}}/>
+                <img class="league-content" src={seriea} style={{height:'200px'}}/>
                 </div>
                 </div>
                 <h1 class='viewmore' onClick={()=> navigate(`/products/`)}>
@@ -122,7 +122,7 @@ function Homepage() {
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
   <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the fans</h2>
-  <p style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to make you feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
+  <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to make you feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
   <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
@@ -150,7 +150,7 @@ function Homepage() {
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
   <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the players</h2>
-  <p style={{ fontSize: '1.2rem', width: '95%' }}>We also source football shirts with player specifications up to the standards of what your heroes wear on the pitch. Whether you're a pro striving for excellence or an amateur looking to up your game, we've got you covered. Check out our player specification jerseys or message us to source one just for you!</p>
+  <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>We also source football shirts with player specifications up to the standards of what your heroes wear on the pitch. Whether you're a pro striving for excellence or an amateur looking to up your game, we've got you covered. Check out our player specification jerseys or message us to source one just for you!</p>
   <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
