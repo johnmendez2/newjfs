@@ -137,7 +137,7 @@
         .productdisplayforhighlights {
           flex-direction: row;
           margin-bottom: 10px;
-          justify-content: space-evenly;
+          justify-content: space-between;
           overflow: scroll;
       }
         
