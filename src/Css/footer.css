@@ -1,15 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-.footer{
-  color: white; 
-  background-color: #4101ab; 
-  height: 167px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+.content {
+  flex: 1;
+}
+
+.footer {
+  color: white;
+  background-color: #4101ab;
+  height: 167px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 36px;
-  position: static;
   width: 100%;
-  bottom: 0;
 }
     
     .followtextmobile{

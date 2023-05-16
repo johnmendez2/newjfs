@@ -1,6 +1,6 @@
 import Lottie from 'react-lottie';
 import { SocialIcon } from 'react-social-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fs } from '../Config/config';
 import Footer from './Footer';
@@ -90,13 +90,6 @@ function Homepage() {
   </div>
 ))}
 
-
-  <div>
-    <div class="square">
-      <img class="square-content" src={inter} />
-    </div>
-    <h1 style={{textAlign: "center", fontSize:'1.2rem'}}>Inter '06 Home</h1>
-  </div>
                 </div>
             </div>
             <div className='shopbyleague' >
@@ -129,7 +122,8 @@ function Homepage() {
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
   <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the fans</h2>
-  <p style={{ fontSize: '1.2rem', width: '95%' }}>We've got a wide selection of high-quality football shirts from your favorite teams so you can show your support wherever you go. Our authentic jerseys make you feel like part of the team and won't break the bank. Shop now and find the perfect shirt to showcase your passion for football and your favorite players. Show your love for the beautiful game!</p>
+  <p style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to have the best price in town, so you can feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
+  <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
   <div className="homepagelottie" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
@@ -157,6 +151,7 @@ function Homepage() {
   <div className='textboxborder'>
   <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the players</h2>
   <p style={{ fontSize: '1.2rem', width: '95%' }}>We also source football shirts with player specifications up to the standards of what your heroes wear on the pitch. Whether you're a pro striving for excellence or an amateur looking to up your game, we've got you covered. Check out our player specification jerseys or message us to source one just for you!</p>
+  <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
 </div>

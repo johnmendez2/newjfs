@@ -56,10 +56,22 @@ useEffect(()=>{
 useEffect(()=>{
     console.log(prod)
 }, [prod])
+
+
+
+const [showFooter, setShowFooter] = useState(false);
+useEffect(() => {
+  const timeoutId = setTimeout(() => {
+    setShowFooter(true);
+  }, 1000);
+  return () => clearTimeout(timeoutId);
+}, []);
+
+
   return (
     <div>
       <Navbar />
-      <div className="mobile-layout">
+      {showFooter && <div className="mobile-layout">
       <div class='shippingmessage'>
                 Free shipping in the UAE on orders over AED 200!
             </div>
@@ -81,8 +93,10 @@ useEffect(()=>{
             Delivery all over the UAE for AED 25. Free delivery on orders over AED 200.
           </div>
         </div>
-      </div>
-      <div className="desktop-layout">
+      </div>}
+
+      
+      {showFooter && <div className="desktop-layout">
       <div class='shippingmessage'>
                 Free shipping in the UAE on orders over AED 200!
             </div>
@@ -114,7 +128,7 @@ useEffect(()=>{
             </div>
           </div>
         </div>
-      </div>
+      </div>}
       <Footer />
     </div>
   );

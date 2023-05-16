@@ -40,7 +40,6 @@ export default function Giveaways(){
         <p style={{fontSize: '1.5rem', maxWidth: '90%', marginBottom: '25px'}}>
         Want to grow your football memorabilia collection with some awesome items? Look no further! Follow us on Instagram @johnsfootballshirts and check out our pinned posts for a chance to win rare retro grails, signed gear, and other amazing football treasures. We're excited to share these giveaways with you and see your collection grow! Don't wait - join in on the fun now.               </p>
       </div>
-      <Footer/>
         </div>
     );
 }

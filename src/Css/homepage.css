@@ -65,6 +65,7 @@
         padding-top: 8px; 
         padding-bottom: 10px;
         cursor: pointer;
+        font-weight: 600;
     }
 
     .homepagelottie{
@@ -122,6 +123,9 @@
         background: -webkit-linear-gradient(to right, #cc2b5e, #753a88); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #cc2b5e, #753a88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
+      }
+      .shopnow{
+        font-size: 20px;
       }
 
       @media (max-width: 768px) {
@@ -228,6 +232,10 @@
       margin-left: 15px !important;
       padding-top: 5px;
       padding-bottom: 10px;
+  }
+
+  .shopnow{
+    display: none;
   }
 
       }
