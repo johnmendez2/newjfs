@@ -122,7 +122,7 @@ function Homepage() {
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
   <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the fans</h2>
-  <p style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to have the best price in town, so you can feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
+  <p style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to make you feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
   <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
