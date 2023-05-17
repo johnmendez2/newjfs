@@ -1,5 +1,4 @@
 import React from "react";
-import Shirt from "./Shirt";
 import "../Css/productcard.css";
 import { useNavigate } from "react-router-dom";
 

@@ -1,14 +1,13 @@
 import Lottie from 'react-lottie';
-import { SocialIcon } from 'react-social-icons';
 import { useNavigate, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fs } from '../Config/config';
 import Footer from './Footer';
 import Mission from './MIssion';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import animationData from '../Assets/129328-sport-fans-watching-match-on-tv.json';
 import animationData2 from '../Assets/126572-football-team-players.json';
-import onPhone from '../Assets/126569-soccer-online-broadcast.json';
 
 
 import premlogo from "../Assets/prem.png";
@@ -18,10 +17,6 @@ import laliga from "../Assets/laliga.png";
 import seriea from "../Assets/seriea.png";
 
 import retroshirts from "../Assets/cropped.jpg";
-
-import italy from "../Assets/ITALY.png";
-import spain from "../Assets/SPAIN.png";
-import inter from "../Assets/INTER.png";
 
 import Navbar from './Navbar';
 import '../Css/homepage.css';
@@ -46,14 +41,6 @@ function Homepage() {
         }
       };
 
-      const onPhoneoption = {
-        loop: true,
-        autoplay: true,
-        animationData: onPhone,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid slice"
-        }
-      };
 
       useEffect(() => {
         const getProducts = async () => {
@@ -71,8 +58,27 @@ function Homepage() {
       }, []);
 
     return (
+      <HelmetProvider>
         <div >
             <Navbar></Navbar>
+            <Helmet>
+          <meta charSet="utf-8" />
+          <title>Homepage</title>
+          {/* Add your meta tags here */}
+          <meta name="description" content="Shop a wide range of authentic football shirts in Dubai. Find jerseys from top teams and players. Free shipping on orders over AED 200. Explore our collection now!" />
+  <meta name="keywords" content="football shirts, jerseys, Dubai, buy online, authentic, top teams, players, free shipping" />
+  <link rel="canonical" href="https://johnsfootballshirts.com/#" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  {/* Open Graph Tags */}
+  <meta property="og:title" content="Football Shirts Dubai | Buy Authentic Jerseys Online | YourWebsite" />
+  <meta property="og:description" content="Shop a wide range of authentic football shirts in Dubai. Find jerseys from top teams and players. Free shipping on orders over AED 200. Explore our collection now!" />
+  <meta property="og:image" content="https://www.yourwebsite.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.yourwebsite.com/football-shirts-dubai" />
+
+
+        </Helmet>
             <div class='shippingmessage'>
                 Free shipping in the UAE on orders over AED 200!
             </div>
@@ -84,7 +90,7 @@ function Homepage() {
                 {products.map((product) => (
   <div style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
     <div class="square" onClick={()=> navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)}>
-      <img class="square-content" src={product.url} />
+      <img class="square-content" src={product.url} alt='featuredimage' />
     </div>
     <h1 style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h1>
   </div>
@@ -99,19 +105,19 @@ function Homepage() {
 
                 <div class="leaguecontainer">
                 <div class="squareLeague" onClick={()=> navigate(`/products/premierleague`)}>
-                    <img class="league-content" src={premlogo} style={{height:'200px'}}/>
+                    <img class="league-content" alt='leaguelogo' src={premlogo} style={{height:'200px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/bundesliga`)}>
-                <img class="league-content" src={bundesliga} style={{height:'200px'}}/>
+                <img class="league-content" alt='leaguelogo' src={bundesliga} style={{height:'200px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/ligue1`)}>
-                <img class="league-content" src={ligue1} style={{height:'180px'}}/>
+                <img class="league-content" alt='leaguelogo' src={ligue1} style={{height:'180px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/laliga`)}>
-                <img class="league-content" src={laliga} style={{height:'200px'}}/>
+                <img class="league-content" alt='leaguelogo' src={laliga} style={{height:'200px'}}/>
                 </div>
                 <div class="squareLeague" onClick={()=> navigate(`/products/seriea`)}>
-                <img class="league-content" src={seriea} style={{height:'200px'}}/>
+                <img class="league-content" alt='leaguelogo' src={seriea} style={{height:'200px'}}/>
                 </div>
                 </div>
                 <h1 class='viewmore' onClick={()=> navigate(`/products/`)}>
@@ -135,7 +141,7 @@ function Homepage() {
   </div>
 </div>
 <div>
-    <img className='hookimage' src={retroshirts} style={{ minHeight: "500px",height: "auto", width: '100%', marginTop: '4px'}}></img>
+    <img className='hookimage' alt='spanofshirts' src={retroshirts} style={{ minHeight: "500px",height: "auto", width: '100%', marginTop: '4px'}}></img>
 </div>
 <div className='shopmoderncard' style={{ marginBottom: '4px',display: 'flex', color: 'white', backgroundColor: 'black', height: '350px'}}>
 
@@ -158,6 +164,8 @@ function Homepage() {
 <Mission/>
         <Footer/>
         </div>
+      </HelmetProvider>
+      
     );
 }
 

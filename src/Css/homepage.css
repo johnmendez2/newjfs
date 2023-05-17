@@ -1,291 +1,287 @@
+.productdisplayforhighlights {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  overflow: none;
+}
 
-    .productdisplayforhighlights {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-        justify-content: space-evenly;
-        overflow: none;
-      }
+.leaguecontainer{
+display: flex;
+align-items: center;
+margin-top: 20px;
+justify-content: space-evenly;
+}
 
-    .leaguecontainer{
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-      justify-content: space-evenly;
-    }
-      
-      .square {
-        width: 25rem;
-        height: 25rem;
-        background-color: #ffffff;
-        border-radius: 100px;
-        margin-bottom: 20px;
-        transition: transform 0.2s ease-in-out;
-        cursor: pointer;
-      }
+.square {
+  width: 25rem;
+  height: 25rem;
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
 
-      .highlights{
-        background-color: 'white';
-        height: 550px;
-      }
+.highlights{
+  background-color: 'white';
+  height: 550px;
+}
 
-      .square-content{
-        height:400px;
-        border-radius: 30px;
-      }
+.square-content{
+  height:400px;
+  border-radius: 30px;
+}
 
-      .shippingmessage{
-        padding-bottom: 5px;  
-        color: white;
-        background-color: black; 
-        height: 60px; 
-        font-size: 25px; 
-        display: flex; 
-        justify-content: center;
-        align-items: center; 
-      }
-      
-      .square:hover {
-        transform: scale(1.1);
-      }
-      
-    
-      .shopbyleague{
-        background: #cc2b5e; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #753a88, #cc2b5e); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #5a67ff, #40af62);
-        /* background: linear-gradient(to right,#753a88, #cc2b5e); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        height: 400px;
-    }
-    
-    .viewmore{
-        font-size: 15px; 
-        color: white; 
-        display: flex; 
-        margin-left: 90%; 
-        padding-top: 8px; 
-        padding-bottom: 10px;
-        cursor: pointer;
-        font-weight: 600;
-    }
+.shippingmessage{
+  padding-bottom: 5px;  
+  color: white;
+  background-color: black; 
+  height: 60px; 
+  font-size: 25px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
 
-    .homepagelottie{
-        display: flex;
-        justify-content: center;
-        align-items: center ;
-        width: 50%;
-    }
-    .textboxborder{
-        width: 80%; 
-        height: 80%; 
-        background-color: transparent; 
-        border: 4px solid white; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
-        text-align: center;
+.square:hover {
+  transform: scale(1.1);
+}
 
-    }
-      .circle {
-        display: 'flex'; 
-        justify-content: 'center'; 
-        align-items: 'center'; 
-        height: 325px;
-        width: 325px;
-        border-radius: 50%;
-        background-color: #f5f5f5;
-        cursor: pointer;
-        margin-left: 5px;
-      }
-    
-      .squareLeague {
-        width: 250px;
-        height: 250px;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        transition: transform 0.2s ease-in-out;
-        cursor: pointer;
-      }
-    
-      .squareLeague:hover {
-        transform: scale(1.1);
-      }
-      .footer{
-        background: #833ab4; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-      .hookmessage {
-        background: #cc2b5e; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #cc2b5e, #753a88); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #cc2b5e, #753a88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-      }
-      .shopnow{
-        font-size: 20px;
-      }
 
-      @media (max-width: 768px) {
-        .highlights{
-          height: 360px;
-        }
+.shopbyleague{
+  background: #cc2b5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5a67ff, #40af62);
+  /* background: linear-gradient(to right,#753a88, #cc2b5e); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 400px;
+}
 
-        .productdisplayforhighlights {
-          flex-direction: row;
-          margin-bottom: 10px;
-          justify-content: space-between;
-          overflow: scroll;
-      }
-        
-        .square {
-          width: 14rem;
-          height: 14rem;
-          border-radius: 30px;
-          margin-bottom: 20px;
-          box-shadow: 0px 0px 0px #bebebe, -0px -0px 0px #ffffff;
-          margin-left: 10px;
-          margin-right: 15px;
-        }
+.viewmore{
+  font-size: 15px; 
+  color: white; 
+  display: flex; 
+  margin-left: 90%; 
+  padding-top: 8px; 
+  padding-bottom: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
 
-        .leaguecontainer{
-          flex-direction: column;
-          margin-bottom: 10px;
-        }
+.homepagelottie{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  width: 50%;
+}
+.textboxborder{
+  width: 80%; 
+  height: 80%; 
+  background-color: transparent; 
+  border: 4px solid white; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
 
-        .shippingmessage{
-          padding-bottom: 5px;  
-          color: white;
-          background-color: black; 
-          height: 60px; 
-          font-size: 15px; 
-          display: flex; 
-          justify-content: center;
-          align-items: center; 
-        }
-      
-        .shopbyleague {
-          height: auto;
-        }
-      
-        .homepagelottie{
-          display: none !important;
-      }
-      
-        .textboxborder {
-          width: 100%;
-          height: auto;
-        }
-      
-        .circle {
-          height: 250px;
-          width: 250px;
-        }
-      
-        .squareLeague {
-          width: 60%;
-          height: auto;
-          margin-bottom: 20px;
-        }
-        .square .square-content{
-          height: 14rem;
-          width: auto;
-        }
-        .shippingmessage {
-          font-size: 15px !important;
-        }
-        .textboxborder{
-          width: 120%; 
-          height: 80%; 
-          background-color: transparent; 
-          border: 4px solid white; 
-          display: flex; 
-          flex-direction: column; 
-          justify-content: center; 
-          align-items: center; 
-          text-align: center;
+}
+.circle {
+  display: 'flex'; 
+  justify-content: 'center'; 
+  align-items: 'center'; 
+  height: 325px;
+  width: 325px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.squareLeague {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.squareLeague:hover {
+  transform: scale(1.1);
+}
+.footer{
+  background: #833ab4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+.hookmessage {
+  background: #cc2b5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cc2b5e, #753a88); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cc2b5e, #753a88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.shopnow{
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .highlights{
+    height: 360px;
+  }
+
+  .productdisplayforhighlights {
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    overflow: scroll;
+}
   
-      }
-      .cardhalfwithtextbox{
-          width: 100% !important;
-      }
-
-      .viewmore{
-        font-size: 15px; 
-        color: white; 
-        display: flex; 
-        margin-left: 75%; 
-        padding-top: 8px; 
-        padding-bottom: 20px;
-    }
-
-    .hookimage{
-      min-height: 160px !important;
-    }
-
-    .featuretext {
-      font-size: 25px !important;
-      color: black;
-      display: flex;
-      margin-left: 15px !important;
-      padding-top: 5px;
-      padding-bottom: 10px;
+  .square {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 0px #bebebe, -0px -0px 0px #ffffff;
+    margin-left: 10px;
+    margin-right: 15px;
   }
 
-  .shopnow{
-    display: none;
+  .leaguecontainer{
+    flex-direction: column;
+    margin-bottom: 10px;
   }
 
-      }
-      
-      @media (max-width: 480px) {
-        .shippingmessage {
-          font-size: 20px;
-        }
-      }
+  .shippingmessage{
+    padding-bottom: 5px;  
+    color: white;
+    background-color: black; 
+    height: 60px; 
+    font-size: 15px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .shopbyleague {
+    height: auto;
+  }
+
+  .homepagelottie{
+    display: none !important;
+}
+
+  .textboxborder {
+    width: 100%;
+    height: auto;
+  }
+
+  .circle {
+    height: 250px;
+    width: 250px;
+  }
+
+  .squareLeague {
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .square .square-content{
+    height: 14rem;
+    width: auto;
+  }
+  .shippingmessage {
+    font-size: 15px !important;
+  }
+  .textboxborder{
+    width: 120%; 
+    height: 80%; 
+    background-color: transparent; 
+    border: 4px solid white; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+
+}
+.cardhalfwithtextbox{
+    width: 100% !important;
+}
+
+.viewmore{
+  font-size: 15px; 
+  color: white; 
+  display: flex; 
+  margin-left: 75%; 
+  padding-top: 8px; 
+  padding-bottom: 20px;
+}
+
+.hookimage{
+min-height: 160px !important;
+}
+
+.featuretext {
+font-size: 25px !important;
+color: black;
+display: flex;
+margin-left: 15px !important;
+padding-top: 5px;
+padding-bottom: 10px;
+}
+
+.shopnow{
+display: none;
+}
+
+}
+
+@media (max-width: 480px) {
+  .shippingmessage {
+    font-size: 20px;
+  }
+}
 
 
-      
 
-      @media screen 
-      and (min-device-width: 1200px) 
-      and (max-device-width: 1600px) 
-      and (-webkit-min-device-pixel-ratio: 1) {
-        .productdisplayforhighlights {
-          flex-direction: row;
-          margin-bottom: 10px;
-          justify-content: space-between;
-          overflow: scroll;
-      }
 
-      .squareLeague {
-        width: 200px;
-        height: 200px;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        transition: transform 0.2s ease-in-out;
-        cursor: pointer;
-    }
+@media only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) {
+  .productdisplayforhighlights {
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    overflow: scroll;
+}
 
-    .squareLeague div:last-child{
-      height: 150px;
-    }
+.squareLeague {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
 
-    .textinsquare{
-      font-size: 1rem !important;
-    }
-    .shopbyleague{
-      height: 340px !important;
-    }
+.squareLeague div:last-child{
+height: 150px;
+}
 
-    .league-content{
-      height: 175px !important;
-    }
+.textinsquare{
+font-size: 1rem !important;
+}
+.shopbyleague{
+height: 340px !important;
+}
 
-      }
+.league-content{
+height: 175px !important;
+}
+
+}

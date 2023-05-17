@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
-import italy from "../Assets/ITALY.png";
 import '../Css/shirtpage.css'
 import Footer from "./Footer";
-import { auth,fs } from '../Config/config';
+import { fs } from '../Config/config';
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ImageGallery from 'react-image-gallery';
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function ShirtPage() {
   const location = useLocation();
@@ -69,7 +69,12 @@ useEffect(() => {
 
 
   return (
-    <div>
+    <HelmetProvider>
+      <div>
+      <Helmet>
+          <title>{prod.title}</title>
+          <meta name="description" content={prod.description} />
+        </Helmet>
       <Navbar />
       {showFooter && <div className="mobile-layout">
       <div class='shippingmessage'>
@@ -131,5 +136,7 @@ useEffect(() => {
       </div>}
       <Footer />
     </div>
+    </HelmetProvider>
+  
   );
 }
