@@ -142,4 +142,16 @@
     margin-top: 30px;
 }
   }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .productDesc {
+    margin-bottom: 20px;
+    margin-top: 80px;
+    max-width: 80%;
+    margin-left: 25px;
+}
+  }
   
