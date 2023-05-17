@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Lottie from "react-lottie";
 import animationData from '../FAQanimations/38219-verification-badge.json';
 import animationData2 from '../FAQanimations/98455-delivery-truck.json';
-import printing from '../FAQanimations/21397-man-using-printing-machine.json';
+import notfound from '../FAQanimations/71229-not-found.json';
 import wash from '../FAQanimations/3138-washing-machine.json';
 import iron from '../FAQanimations/49860-ironing-people-animation.json'
 import '../Css/faqs.css'
@@ -25,10 +25,10 @@ export default function Faqs() {
         }
     };
 
-    const printer = {
+    const depop = {
         loop: true,
         autoplay: true,
-        animationData: printing,
+        animationData: notfound,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice"
         }
@@ -94,13 +94,13 @@ export default function Faqs() {
                 <div className='imgrightfaq' style={{ marginTop: '4px', display: 'flex', color: 'black', backgroundColor: 'white', height: '300px' }}>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%' }}>
   <div style={{ width: '80%', height: '80%', backgroundColor: 'transparent', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-  <h2 style={{ marginBottom: '10px', fontSize: '25px', fontWeight: 'bold' }}>Do you source namesets?</h2>
-  <p style={{ fontSize: '14px' }}>Absolutely! we can source namesets for your shirts. Please send us a message to inquire about the availability and pricing of your desired nameset.</p>
+  <h2 style={{ marginBottom: '10px', fontSize: '25px', fontWeight: 'bold' }}>What do I do if I cannot enter my phone number on Depop?</h2>
+  <p style={{ fontSize: '14px' }}>This has been a bug on Depop's website for a while. If you wish to create a new account on Depop the only way to do it with a UAE number is through their mobile application.</p>
 </div>
   </div>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
     <Lottie 
-        options={printer}
+        options={depop}
         height={120}
         width={100}
       />
@@ -184,13 +184,13 @@ export default function Faqs() {
                 <div className='imgrightfaq' style={{ marginTop: '4px', display: 'flex', color: 'black', backgroundColor: 'white', height: '350px' }}>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '70%' }}>
   <div style={{ width: '80%', height: '80%', backgroundColor: 'transparent', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-  <h2 style={{ marginBottom: '10px', fontSize: '36px', fontWeight: 'bold' }}>Do you source namesets?</h2>
-  <p style={{ fontSize: '24px' }}>Absolutely! we can source namesets for your shirts. Please send us a message to inquire about the availability and pricing of your desired nameset.</p>
+  <h2 style={{ marginBottom: '10px', fontSize: '36px', fontWeight: 'bold' }}>What do I do if I cannot enter my phone number on Depop?</h2>
+  <p style={{ fontSize: '24px' }}>This has been a bug on Depop's website for a while. If you wish to create a new account on Depop the only way to do it with a UAE number is through their mobile application.</p>
 </div>
   </div>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
     <Lottie 
-        options={printer}
+        options={depop}
         height={350}
         width={450}
       />
@@ -233,6 +233,9 @@ export default function Faqs() {
 
   </div>
 </div>           
+                
+
+
                 
             </div>
             <Footer />
