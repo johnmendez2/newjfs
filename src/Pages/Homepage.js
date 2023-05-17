@@ -63,7 +63,7 @@ function Homepage() {
             <Navbar></Navbar>
             <Helmet>
           <meta charSet="utf-8" />
-          <title>Homepage</title>
+          <title>John's Football Shirts</title>
           {/* Add your meta tags here */}
           <meta name="description" content="Shop a wide range of authentic football shirts in Dubai. Find jerseys from top teams and players. Free shipping on orders over AED 200. Explore our collection now!" />
   <meta name="keywords" content="football shirts, jerseys, Dubai, buy online, authentic, top teams, players, free shipping" />
