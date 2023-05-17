@@ -153,5 +153,15 @@
     max-width: 80%;
     margin-left: 25px;
 }
+
+.image-gallery {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  width: 100%;
+}
   }
   
