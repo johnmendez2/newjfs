@@ -72,7 +72,7 @@ useEffect(() => {
     <HelmetProvider>
       <div>
       <Helmet>
-          <title>{prod.title} ! John's Football Shirts</title>
+          <title>{prod.title}</title>
           <meta name="description" content={prod.description} />
         </Helmet>
       <Navbar />
