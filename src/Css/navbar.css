@@ -72,6 +72,10 @@
         padding-top: 10px;
         padding-bottom: 10px;
       }
+        
+        .search-container.open:focus{
+  outline: none;
+}
       
       
       /* Add transitions to animate the search bar opening and closing */
