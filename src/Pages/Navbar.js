@@ -82,7 +82,7 @@ function Navbar() {
         </div>
       <div className={`search-container ${searchOpen ? 'open' : ''}`}>
         <form>
-          <input type="text" placeholder="" />
+          <input type="text" placeholder="Search store here..." />
           <button type="submit" onClick={handleGo}>Go</button>
         </form>
       </div>
