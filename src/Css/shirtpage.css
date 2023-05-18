@@ -6,7 +6,7 @@
   user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   position: relative;
-  width: 60%;
+  width: 75%;
   margin-bottom: 20px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .image-gallery-content .image-gallery-slide .image-gallery-image {
-  max-height: calc(100vh - 80px);
+  max-height: 80rem;
   border-radius: 50px;
 }
 
