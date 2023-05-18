@@ -17,7 +17,7 @@ export default function Giveaways(){
         <HelmetProvider>
           <div>
             <Helmet>
-              <title>Giveaways | YourWebsite</title>
+              <title>Giveaways | John's Football Shirts</title>
               <meta name="description" content="Participate in our football memorabilia giveaways and get a chance to win rare retro grails, signed gear, and other amazing football treasures. Follow us on Instagram @johnsfootballshirts for more details." />
             </Helmet>
             <Navbar />

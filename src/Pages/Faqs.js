@@ -7,6 +7,7 @@ import notfound from '../FAQanimations/71229-not-found.json';
 import wash from '../FAQanimations/3138-washing-machine.json';
 import iron from '../FAQanimations/49860-ironing-people-animation.json'
 import '../Css/faqs.css'
+import { Helmet, HelmetProvider } from "react-helmet-async";
 export default function Faqs() {
     const defaultOptions = {
         loop: true,
@@ -53,8 +54,13 @@ export default function Faqs() {
     };
 
     return (
-        <div>
+        <HelmetProvider>
+            <div>
             <Navbar />
+            <Helmet>
+            <title>Frequently asked questions ! John's Football Shirts</title>
+          <meta name="description" content="See answers to frequently asked questions about our website and also about care instructions for your football shirts." />
+            </Helmet>
             <div className="mobilefaq">
             <div className='imgrightfaq' style={{ marginTop: '4px', display: 'flex', color: 'black', backgroundColor: 'white', height: '300px' }}>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%' }}>
@@ -240,5 +246,7 @@ export default function Faqs() {
             </div>
             <Footer />
         </div>
+        </HelmetProvider>
+        
     )
 }

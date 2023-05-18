@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import { useNavigate, useLocation } from "react-router-dom";
 import Fuse from 'fuse.js';
 import "../Css/collectionpage.css";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function CollectionPage() {
   const [products, setProducts] = useState([]);
@@ -60,8 +61,13 @@ export default function CollectionPage() {
   }, [location]);
 
   return (
-    <div>
+    <HelmetProvider>
+          <div>
       <Navbar />
+      <Helmet>
+      <title>Products | John's Football Shirts</title>
+              <meta name="description" content="Browse through beautiful football shirts past and present." />
+            </Helmet>
       <div className="collection-page">
         {isFetching ? (
           <h2>Fetching products...</h2>
@@ -89,6 +95,7 @@ export default function CollectionPage() {
       </div>
       <Footer />
     </div>
+    </HelmetProvider>
   );
   
   
