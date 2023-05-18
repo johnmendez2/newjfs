@@ -17,7 +17,7 @@ export default function Mission() {
           alignItems: "center",
           justifyContent: "center",
           height: "500px",
-          maxWidth: '80%',
+          maxWidth: '87%',
           margin: '0 auto',
         }}
       >
