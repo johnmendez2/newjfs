@@ -8,6 +8,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import animationData from '../Assets/129328-sport-fans-watching-match-on-tv.json';
 import animationData2 from '../Assets/126572-football-team-players.json';
+import scrolldata from '../Assets/15424-scroll-down-animation.json';
 
 
 import premlogo from "../Assets/prem.png";
@@ -36,6 +37,15 @@ function Homepage() {
         loop: true,
         autoplay: true,
         animationData: animationData2,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice"
+        }
+      };
+
+      const scrollright = {
+        loop: true,
+        autoplay: true,
+        animationData: scrolldata,
         rendererSettings: {
           preserveAspectRatio: "xMidYMid slice"
         }
@@ -86,6 +96,13 @@ function Homepage() {
                 <h1 className='featuretext' style={{fontSize: '30px', color: 'black', display: 'flex', marginLeft: '50px', paddingTop: '5px' ,paddingBottom: '10px'}}>
                 Featured this week:
                 </h1>
+                <div className="maclottiescroll">
+    <Lottie 
+        options={scrollright}
+        height={76}
+        width={26}
+      />
+  </div>
                 <div class="productdisplayforhighlights">
                 {products.map((product) => (
   <div style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>

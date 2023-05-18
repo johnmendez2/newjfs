@@ -128,6 +128,10 @@ justify-content: space-evenly;
   font-size: 20px;
 }
 
+.maclottiescroll{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .highlights{
     height: 360px;
@@ -238,6 +242,10 @@ padding-bottom: 10px;
 display: none;
 }
 
+.maclottiescroll{
+  display: none;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -282,6 +290,14 @@ height: 340px !important;
 
 .league-content{
 height: 175px !important;
+}
+
+.maclottiescroll{
+  display: flex;
+  position: absolute;
+  right: 60px;
+  top: 340px;
+  transform: rotate(270deg);
 }
 
 }
