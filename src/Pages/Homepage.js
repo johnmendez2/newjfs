@@ -172,8 +172,8 @@ function Homepage() {
   </div>
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
-  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the players</h2>
-  <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>We also source football shirts with player specifications up to the standards of what your heroes wear on the pitch. Whether you're a pro striving for excellence or an amateur looking to up your game, we've got you covered. Check out our player specification jerseys or message us to source one just for you!</p>
+  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the collectors</h2>
+  <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>Immerse yourself in our vast assortment of one-of-a-kind jerseys, spanning the rich history of football's past and present. From rare vintage gems to modern classics, our curated collection is a treasure trove for collectors. Expand your collection and showcase your love for football through these captivating pieces of history.</p>
   <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
