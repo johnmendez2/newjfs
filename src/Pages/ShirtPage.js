@@ -72,7 +72,7 @@ export default function ShirtPage() {
           .collection("NEWwebsiteProducts")
           .where("league", "==", prod.league)
           .get();
-
+  
         const featuredproducts = await fs
           .collection("NEWwebsiteProducts")
           .where("featured", "==", "yes")
@@ -82,17 +82,22 @@ export default function ShirtPage() {
         productsByPrice.forEach((doc) => {
           productsArray.push({ id: doc.id, ...doc.data() });
         });
-        
+  
         productsByLeague.forEach((doc) => {
           productsArray.push({ id: doc.id, ...doc.data() });
         });
+        console.log(productsArray.length)
+  
         // Filter out objects with the same title as prod.title
-        if (productsArray.length === 0){
+        const filteredProductsArray = productsArray.filter(
+          (product) => product.title !== prod.title
+        );
+
+        if (filteredProductsArray.length === 0) {
           featuredproducts.forEach((doc) => {
-            productsArray.push({ id: doc.id, ...doc.data() });
+            filteredProductsArray.push({ id: doc.id, ...doc.data() });
           });
         }
-        const filteredProductsArray = productsArray.filter((product) => product.title !== prod.title);
   
         setProducts(filteredProductsArray);
       }
