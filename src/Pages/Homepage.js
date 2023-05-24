@@ -96,20 +96,20 @@ function Homepage() {
                 <h1 className='featuretext' style={{fontSize: '30px', color: 'black', display: 'flex', marginLeft: '50px', paddingTop: '5px' ,paddingBottom: '10px'}}>
                 Featured this week:
                 </h1>
-                <div className="maclottiescroll">
+                {/* <div className="maclottiescroll">
     <Lottie 
         options={scrollright}
         height={76}
         width={26}
       />
-  </div>
+  </div> */}
                 <div class="productdisplayforhighlights">
                 {products.map((product) => (
-  <div style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
+  <div className='squareboxforfeatured' style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
     <div class="square" onClick={()=> navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)}>
       <img class="square-content" src={product.url} alt='featuredimage' />
     </div>
-    <h1 style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h1>
+    <h1 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h1>
   </div>
 ))}
 

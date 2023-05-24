@@ -261,8 +261,38 @@ display: none;
   .productdisplayforhighlights {
     flex-direction: row;
     margin-bottom: 10px;
-    justify-content: space-between;
     overflow: scroll;
+}
+.squareboxforfeatured{
+  padding: 0px !important; 
+  margin-left: 0px !important;
+   margin-right:0px !important;
+}
+
+.square-content{
+  height: 275px;
+}
+
+.featuredcontenttext{
+  font-size: 1rem !important;
+}
+
+.square {
+  height: 18rem;
+  width: 17rem;
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.highlights{
+  height: 420px;
+}
+
+.hookimage{
+  min-height: 465px !important;
 }
 
 .squareLeague {
