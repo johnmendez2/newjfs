@@ -87,7 +87,7 @@ export default function ShirtPage() {
           productsArray.push({ id: doc.id, ...doc.data() });
         });
         // Filter out objects with the same title as prod.title
-        if (productsArray.length == 0){
+        if (productsArray.length === 0){
           featuredproducts.forEach((doc) => {
             productsArray.push({ id: doc.id, ...doc.data() });
           });
