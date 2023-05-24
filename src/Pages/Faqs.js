@@ -52,6 +52,8 @@ export default function Faqs() {
             preserveAspectRatio: "xMidYMid slice"
         }
     };
+    
+    
 
     return (
         <HelmetProvider>
