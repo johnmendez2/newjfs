@@ -173,7 +173,6 @@ export default function ShirtPage() {
                   <h1 className='featuredcontenttext' style={{ textAlign: "center", fontSize: '1.2rem', minHeight: '42px' }}>{product.title}</h1>
                 </div>
               ))}
-
             </div>
           </div>
         </div>
