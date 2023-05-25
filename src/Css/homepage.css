@@ -286,7 +286,9 @@ display: none;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
-
+.square:hover {
+  transform: scale(1.0);
+}
 .highlights{
   height: 420px;
 }
