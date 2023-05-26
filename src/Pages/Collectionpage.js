@@ -35,7 +35,7 @@ export default function CollectionPage() {
         }));
       
         const fuse = new Fuse(products, {
-          keys: ['title'],
+          keys: ['title','league'],
           includeScore: true,
           threshold: 0.4,
           ignoreLocation: true,
