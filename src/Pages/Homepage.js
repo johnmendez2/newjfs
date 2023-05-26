@@ -144,9 +144,8 @@ function Homepage() {
             <div className='shopvintagecard' style={{ marginTop: '4px', display: 'flex', color: 'white', backgroundColor: 'black', height: '350px' }}>
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
-  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the fans</h2>
+  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold', textDecoration:'underline', cursor: 'pointer' }} onClick={(() => navigate("/products"))}>For the fans</h2>
   <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to make you feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
-  <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
   <div className="homepagelottie" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
@@ -172,9 +171,8 @@ function Homepage() {
   </div>
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
-  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the collectors</h2>
+  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold', textDecoration:'underline', cursor: 'pointer' }} onClick={(() => navigate("/products/grl"))}>For the collectors</h2>
   <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>Immerse yourself in our vast assortment of one-of-a-kind jerseys, spanning the rich history of football's past and present. From rare vintage gems to modern classics, our curated collection is a treasure trove for collectors. Indulge your passion, expand your collection, and showcase your love for football through these captivating pieces of history.</p>
-  <Link to={'/products/grl'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
 </div>
