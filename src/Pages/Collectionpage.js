@@ -13,16 +13,23 @@ export default function CollectionPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isFetching, setIsFetching] = useState(true);
-
+  let league = "";
   useEffect(() => {
     const getProducts = async () => {
       let query = fs.collection("NEWwebsiteProducts");
     
       // Check if league parameter is provided in the URL
-      const league = location.pathname.split("/")[2];
-      if (league) {
+
+      
+      if (location.pathname.split("/")[2] && location.pathname.split("/")[2] === 'grl'){
+        query = query.where("grail", "==",  "yes")
+        console.log("working")
+      }
+      if (location.pathname.split("/")[2] && location.pathname.split("/")[2].length > 3) {
+        league = location.pathname.split("/")[2];
         query = query.where("league", "==", league);
       }
+      console.log(query)
     
       // Check if search parameter is provided in the URL
       const search = window.location.href.split("search=")[1];
@@ -47,6 +54,7 @@ export default function CollectionPage() {
       }
       else {
         const products = await query.get();
+
         console.log("Products:", products.docs);
         const productsArray = [];
         products.docs.forEach((doc) => {

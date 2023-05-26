@@ -174,7 +174,7 @@ function Homepage() {
   <div className='textboxborder'>
   <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold' }}>For the collectors</h2>
   <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>Immerse yourself in our vast assortment of one-of-a-kind jerseys, spanning the rich history of football's past and present. From rare vintage gems to modern classics, our curated collection is a treasure trove for collectors. Indulge your passion, expand your collection, and showcase your love for football through these captivating pieces of history.</p>
-  <Link to={'/products'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
+  <Link to={'/products/grl'} className='shopnow' style={{color: 'white'}}> SHOP NOW</Link>
 </div>
   </div>
 </div>
