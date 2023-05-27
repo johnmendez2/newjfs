@@ -55,7 +55,7 @@ function Navbar() {
           >
             SHOP
           </div>
-          <div className="faqs" onClick={() => navigate(`/FAQ's`)}>
+          <div className="faqs" onClick={() => navigate(`/FAQs`)}>
             FAQ'S
           </div>
           <div className="giveaways" onClick={() => navigate(`/giveaways`)}>
@@ -73,7 +73,7 @@ function Navbar() {
           >
             SHOP
           </div>
-          <div className="faqs" onClick={() => navigate(`/FAQ's`)}>
+          <div className="faqs" onClick={() => navigate(`/FAQs`)}>
             FAQ'S
           </div>
           <div className="faqs" onClick={() => navigate(`/giveaways`)}>

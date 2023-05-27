@@ -86,7 +86,6 @@ export default function ShirtPage() {
         productsByLeague.forEach((doc) => {
           productsArray.push({ id: doc.id, ...doc.data() });
         });
-        console.log(productsArray.length)
   
         // Filter out objects with the same title as prod.title
         const filteredProductsArray = productsArray.filter(
@@ -112,7 +111,6 @@ export default function ShirtPage() {
     getProd();
   }, [])
   useEffect(() => {
-    console.log(prod)
   }, [prod])
 
   function navigateToProduct(product){

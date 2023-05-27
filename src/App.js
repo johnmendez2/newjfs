@@ -14,7 +14,7 @@ function App() {
         <Route path="/:productId" element={<ShirtPage />} />
         <Route path="/products" element={<Collectionpage />} />
         <Route path="/products/:league" element={<Collectionpage />} />
-        <Route path="/FAQ's" element={<Faqs />} />
+        <Route path="/FAQs" element={<Faqs />} />
         <Route path="/giveaways" element={<Giveaways />} />
       </Routes>
     </Router>
