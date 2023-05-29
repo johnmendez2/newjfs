@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ShirtPage() {
   const location = useLocation();
-  const urlId = location.pathname.split('-')[0].split('/').pop();
+  const urlId = location.pathname.split('-')[0].split('/').pop().slice(-20);
   const navigate = useNavigate();
   const [prod, setProduct] = useState('');
   const [products, setProducts] = useState([]);
