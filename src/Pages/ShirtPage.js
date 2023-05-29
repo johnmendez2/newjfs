@@ -86,9 +86,18 @@ export default function ShirtPage() {
         productsByLeague.forEach((doc) => {
           productsArray.push({ id: doc.id, ...doc.data() });
         });
-  
+        const idSet = new Set();
+
+        let filteredProductsArray= [];
+productsArray.forEach((product) => {
+  if (!idSet.has(product.id)) {
+    idSet.add(product.id);
+    filteredProductsArray.push(product);
+    console.log(product)
+  }
+});
         // Filter out objects with the same title as prod.title
-        const filteredProductsArray = productsArray.filter(
+         filteredProductsArray = filteredProductsArray.filter(
           (product) => product.title !== prod.title
         );
 
@@ -97,6 +106,8 @@ export default function ShirtPage() {
             filteredProductsArray.push({ id: doc.id, ...doc.data() });
           });
         }
+
+        
   
         setProducts(filteredProductsArray);
       }
