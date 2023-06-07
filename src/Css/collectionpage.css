@@ -56,12 +56,14 @@
   
   .sort-container label {
     margin-right: 10px;
+    color: black;
   }
   
   .sort-container select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: black;
   }
 }
 
