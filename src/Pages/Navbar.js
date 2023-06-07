@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchClicked, setSearchClicked] = useState(false);
   const navigate = useNavigate();
   const defaultOptions = {
     loop: true,
@@ -20,7 +21,7 @@ function Navbar() {
     },
   };
 
-  const popularSearches = ['messi', 'fc barcelona', 'international'];
+  const popularSearches = ['fc barcelona', 'international', 'liverpool'];
 
   const handleSearchClick = () => {
     setSearchOpen(!searchOpen);
@@ -28,6 +29,10 @@ function Navbar() {
 
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleSearchbarClick = () => {
+    setSearchClicked(!searchClicked);
   };
 
   const handleGo = (e) => {
@@ -81,14 +86,14 @@ function Navbar() {
         </div>
       </div>
       <div className={`search-container ${searchOpen ? 'open' : ''}`}>
-        <form>
+        <form onClick={handleSearchbarClick}>
           <input type="text" placeholder="Search store here..." />
           <button type="submit" onClick={handleGo}>
             Go
           </button>
         </form>
         
-        {searchOpen && (
+        {searchClicked && (
           <div className="popular-searches">
             <div className="popular-searches-header">
               Popular Searches  {' '} <FontAwesomeIcon icon={faArrowTrendUp} width={'25px'} />
