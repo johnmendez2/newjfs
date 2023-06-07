@@ -91,18 +91,20 @@ export default function CollectionPage() {
             <>
               <h2 className="showing">Showing {products.length} {products.length > 1 ? "products" : "product"}</h2>
               <div className="product-cards-container">
-              <div className="sort-container ">
-                <label htmlFor="sort-by-price">Sort by price:</label>
-                <select
-                  id="sort-by-price"
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                >
-                  <option value="">None</option>
-                  <option value="price-low-to-high">Price (Low to High)</option>
-                  <option value="price-high-to-low">Price (High to Low)</option>
-                </select>
-              </div>
+              {sortedProducts.length > 1 && (
+  <div className="sort-container">
+    <label htmlFor="sort-by-price">Sort by price:</label>
+    <select
+      id="sort-by-price"
+      value={sortBy}
+      onChange={(e) => setSortBy(e.target.value)}
+    >
+      <option value="">None</option>
+      <option value="price-low-to-high">Price (Low to High)</option>
+      <option value="price-high-to-low">Price (High to Low)</option>
+    </select>
+  </div>
+)}
                 {sortedProducts.length > 0 ? (
                   sortedProducts.map((product) => (
                     <ProductCard
