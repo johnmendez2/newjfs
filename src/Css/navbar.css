@@ -54,6 +54,7 @@
         transform-origin: top center;
         transform: scaleY(0);
         transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1;
       
         /* Add these styles for animation effect */
         opacity: 0;
