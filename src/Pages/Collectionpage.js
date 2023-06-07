@@ -47,7 +47,7 @@ export default function CollectionPage() {
           threshold: 0.4,
           ignoreLocation: true,
           ignoreFieldNorm: true
-        });
+        })
         
         const matchingProducts = fuse.search(search).map((result) => result.item);
         setProducts(matchingProducts);
