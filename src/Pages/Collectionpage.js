@@ -93,7 +93,7 @@ export default function CollectionPage() {
               <div className="product-cards-container">
               {sortedProducts.length > 1 && (
   <div className="sort-container">
-    <label htmlFor="sort-by-price">Sort by price:</label>
+    <label htmlFor="sort-by-price">Sort by:</label>
     <select
       id="sort-by-price"
       value={sortBy}
