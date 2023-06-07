@@ -86,7 +86,7 @@ export default function CollectionPage() {
         </Helmet>
         <div className="collection-page">
           {isFetching ? (
-            <h2>Fetching products...</h2>
+            <h2 style={{textAlign:'center'}}>Fetching products...</h2>
           ) : (
             <>
               <h2 className="showing">Showing {products.length} {products.length > 1 ? "products" : "product"}</h2>
