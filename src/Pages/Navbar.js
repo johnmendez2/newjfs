@@ -102,7 +102,7 @@ function Navbar() {
               {popularSearches.map((search) => (
                 <li
                   key={search}
-                  onClick={() => {handlePopularSearch(search);handleSearchbarClick}}
+                  onClick={() => {handlePopularSearch(search); handleSearchbarClick();}}
                 ><FontAwesomeIcon icon={faSearch} width={'16px'}/> 
                   {' '}{search}
                 </li>
