@@ -5,7 +5,8 @@ import animationData from '../FAQanimations/38219-verification-badge.json';
 import animationData2 from '../FAQanimations/98455-delivery-truck.json';
 import notfound from '../FAQanimations/71229-not-found.json';
 import wash from '../FAQanimations/3138-washing-machine.json';
-import iron from '../FAQanimations/49860-ironing-people-animation.json'
+import iron from '../FAQanimations/49860-ironing-people-animation.json';
+import cash from '../FAQanimations/89502-cash-with-hand1111.json'
 import '../Css/faqs.css'
 import { Helmet, HelmetProvider } from "react-helmet-async";
 export default function Faqs() {
@@ -52,6 +53,15 @@ export default function Faqs() {
             preserveAspectRatio: "xMidYMid slice"
         }
     };
+
+    const sell = {
+      loop: true,
+      autoplay: true,
+      animationData: cash,
+      rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice"
+      }
+  };
     
     
 
@@ -151,6 +161,26 @@ export default function Faqs() {
 
   </div>
 </div>
+
+
+
+<div className='shopmoderncard' style={{marginTop: '4px', display: 'flex', color: 'black', backgroundColor: 'white', height: '300px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
+                        <Lottie
+                            options={sell}
+                            height={120}
+                            width={100}
+                        />
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%' }}>
+                        <div style={{ width: '80%', height: '80%', backgroundColor: 'transparent', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                            <h2 style={{ marginBottom: '10px', fontSize: '25px', fontWeight: 'bold' }}>Do you buy shirts?</h2>
+                            <p style={{ fontSize: '14px' }}>Of course! Send us a DM so we can strike a deal.</p>
+                        </div>
+                        
+                    </div>          
+                </div>
+
             </div>
             <div className="desktopfaq">
 
@@ -244,7 +274,22 @@ export default function Faqs() {
                 
 
 
-                
+<div className='shopmoderncard' style={{marginTop: '4px', display: 'flex', color: 'black', backgroundColor: 'white', height: '350px', marginBottom: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
+                        <Lottie
+                            options={sell}
+                            height={350}
+                            width={350}
+                        />
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '70%' }}>
+                        <div style={{ width: '80%', height: '80%', backgroundColor: 'transparent', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                            <h2 style={{ marginBottom: '10px', fontSize: '36px', fontWeight: 'bold' }}>Do you buy shirts?</h2>
+                            <p style={{ fontSize: '24px' }}>Of course! Send us a DM so we can strike a deal.</p>
+                        </div>
+                        
+                    </div>          
+                </div>
             </div>
             <Footer />
         </div>

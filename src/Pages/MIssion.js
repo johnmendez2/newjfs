@@ -1,6 +1,12 @@
 import animationData from '../Assets/126279-soccer-sport-trophy-with-soccer-ball-and-shoes.json';
 import Lottie from 'react-lottie';
+import { useNavigate } from 'react-router-dom';
 export default function Mission() {
+  const navigate = useNavigate();
+  const navigatetoFAQ = () => {
+    window.scrollTo(0, 0); // Scrolls the window to the top
+    navigate(`/FAQs`, { target: '_blank' });
+  }
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -16,7 +22,6 @@ export default function Mission() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          height: "500px",
           maxWidth: '87%',
           margin: '0 auto',
         }}
@@ -30,9 +35,15 @@ export default function Mission() {
       />
 
   </div>
-        <p style={{fontSize: '1.1rem', maxWidth: '80%', marginBottom: '25px'}}>
-        We believe that football shirt collecting should be accessible to everyone at any budget. Our mission is to spread the love of football in a community that shares the passion for the game.  We believe that everyone should have access to the grails they are looking for and we bring the game closer to you by offering authentic shirts at affordable prices. Join us on our mission, Joga Bonito!
-        </p>
+        <p style={{fontSize: '1.1rem', maxWidth: '85%', marginBottom: '25px'}}>
+        We believe in making football shirt collecting accessible to everyone. Our mission is to spread the love of
+        football in a passionate community. We bring the game closer by offering authentic shirts at affordable prices.
+        For any questions, check out the{' '}
+        <span style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }} onClick={navigatetoFAQ}>
+          FAQ page
+        </span> or contact us for more info.
+         Join us on our mission, Joga Bonito!
+         </p>
       </div>
     );
   }
