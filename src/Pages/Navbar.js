@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Lottie from 'react-lottie';
 import animationData from '../Assets/126412-fans.json';
 import '../Css/navbar.css';
@@ -47,6 +47,25 @@ function Navbar() {
     setSearchOpen(false);
   };
 
+  const searchContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target)
+      ) {
+        setSearchClicked(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div>
       <div className="navbar">
@@ -85,26 +104,31 @@ function Navbar() {
           GIVEAWAYS
         </div>
       </div>
-      <div className={`search-container ${searchOpen ? 'open' : ''}`}>
+      <div className={`search-container ${searchOpen ? 'open' : ''}`} ref={searchContainerRef}>
         <form onClick={handleSearchbarClick}>
           <input type="text" placeholder="Search store here..." />
           <button type="submit" onClick={handleGo}>
             Go
           </button>
         </form>
-        
+
         {searchClicked && (
           <div className="popular-searches">
             <div className="popular-searches-header">
-              Popular Searches  {' '} <FontAwesomeIcon icon={faArrowTrendUp} width={'25px'} />
+              Popular Searches <FontAwesomeIcon icon={faArrowTrendUp} width={'25px'} />
             </div>
             <ul>
               {popularSearches.map((search) => (
                 <li
                   key={search}
-                  onClick={() => {handlePopularSearch(search); handleSearchbarClick();}}
-                ><FontAwesomeIcon icon={faSearch} width={'16px'}/> 
-                  {' '}{search}
+                  onClick={() => {
+                    handlePopularSearch(search);
+                    handleSearchbarClick();
+                  }}
+                >
+                  <FontAwesomeIcon icon={faSearch} width={'16px'} />
+                  {' '}
+                  {search}
                 </li>
               ))}
             </ul>
