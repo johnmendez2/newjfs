@@ -18,7 +18,7 @@ export default function CollectionPage() {
   
   useEffect(() => {
     const getProducts = async () => {
-      let query = fs.collection("NEWwebsiteProducts");
+      let query = fs.collection("NEWwebsiteProducts").where("appear", "==", "yes");
       
       // Check if league parameter is provided in the URL
       if (location.pathname.split("/")[2] && location.pathname.split("/")[2] === 'grl'){
