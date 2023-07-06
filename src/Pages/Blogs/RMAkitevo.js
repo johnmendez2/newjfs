@@ -13,7 +13,7 @@ return (
     <Helmet>
     <title>The Evolution of Real Madrid Kits: From the Classic Whites to Modern Marvels | John's Football Shirts</title>
               <meta name="description" content="Real Madrid, one of the most iconic football clubs in the world, has a rich history that spans over a century. Over the years, their jerseys have become synonymous with excellence and a winning tradition. From the classic all-white designs to modern marvels adorned with cutting-edge technology, Real Madrid's jerseys have evolved significantly. In this article, we explore the fascinating journey of Real Madrid's jersey evolution, with a nod to prominent players like Vinicius Jr and Cristiano Ronaldo. Additionally, we touch upon the fierce rivalry with FC Barcelona, making this a must-read for football fans." />
-              <link rel="canonical" href={`https://johnsfootballshirts.com/#/blogs/RealMadridkitevolution`} />
+              <link rel="canonical" href={`https://johnsfootballshirts.com/blogs/RealMadridkitevolution`} />
               <meta name="og:description" content="Real Madrid, one of the most iconic football clubs in the world, has a rich history that spans over a century. Over the years, their jerseys have become synonymous with excellence and a winning tradition. From the classic all-white designs to modern marvels adorned with cutting-edge technology, Real Madrid's jerseys have evolved significantly. In this article, we explore the fascinating journey of Real Madrid's jersey evolution, with a nod to prominent players like Vinicius Jr and Cristiano Ronaldo. Additionally, we touch upon the fierce rivalry with FC Barcelona, making this a must-read for football fans." />
 
     </Helmet>

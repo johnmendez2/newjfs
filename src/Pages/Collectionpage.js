@@ -83,7 +83,7 @@ export default function CollectionPage() {
         <Helmet>
           <title>Products | John's Football Shirts</title>
           <meta name="description" content="Browse through beautiful football shirts past and present." />
-          <link rel="canonical" href={`https://johnsfootballshirts.com/#/products`} />
+          <link rel="canonical" href={`https://johnsfootballshirts.com/products`} />
         </Helmet>
         <div className="collection-page">
           {isFetching ? (
