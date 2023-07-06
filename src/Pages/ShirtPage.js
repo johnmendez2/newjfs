@@ -148,6 +148,7 @@ productsArray.forEach((product) => {
           <title>{prod.title}</title>
           <meta name="og:title" content={prod.title}></meta>
           <meta name="og:description" content={prod.description} />
+          <meta name="description" content={prod.description} />
           <link rel="canonical" href={window.location} />
         </Helmet>
         <Navbar />

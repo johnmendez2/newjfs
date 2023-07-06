@@ -85,8 +85,6 @@ function Homepage() {
   {/* Open Graph Tags */}
   <meta property="og:title" content="Football Shirts Dubai | Buy Authentic Jerseys Online | YourWebsite" />
   <meta property="og:description" content="Shop a wide range of authentic football shirts in Dubai. Find jerseys from top teams and players. Free shipping on orders over AED 200. Explore our collection now!" />
-  <meta property="og:image" content="https://www.yourwebsite.com/images/og-image.jpg" />
-  <meta property="og:url" content="https://www.yourwebsite.com/football-shirts-dubai" />
 
 
         </Helmet>

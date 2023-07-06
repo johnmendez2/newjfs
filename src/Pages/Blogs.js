@@ -36,7 +36,8 @@ function Blogs() {
       <Navbar />
       <Helmet>
       <title>Blogs | John's Football Shirts</title>
-              <meta name="description" content="Browse through beautiful football shirts past and present." />
+              <meta name="description" content="Read through our blogs and articles of football culture." />
+              <meta name="og:description" content="Read through our blogs and articles of football culture." />
             </Helmet>
       <div className="image-container">
       </div>
