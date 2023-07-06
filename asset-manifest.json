@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.119c5d4c.css",
-    "main.js": "/static/js/main.3f377f8f.js",
+    "main.js": "/static/js/main.7b87fba5.js",
     "static/js/787.b7fad3ec.chunk.js": "/static/js/787.b7fad3ec.chunk.js",
     "static/media/cropped.jpg": "/static/media/cropped.3e836b6e6320a8549909.jpg",
     "static/media/jfslogo.png": "/static/media/jfslogo.231208254bad3dd946fc.png",
@@ -11,11 +11,11 @@
     "static/media/ligue1.png": "/static/media/ligue1.a0403d85ce3095288af8.png",
     "index.html": "/index.html",
     "main.119c5d4c.css.map": "/static/css/main.119c5d4c.css.map",
-    "main.3f377f8f.js.map": "/static/js/main.3f377f8f.js.map",
+    "main.7b87fba5.js.map": "/static/js/main.7b87fba5.js.map",
     "787.b7fad3ec.chunk.js.map": "/static/js/787.b7fad3ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.119c5d4c.css",
-    "static/js/main.3f377f8f.js"
+    "static/js/main.7b87fba5.js"
   ]
 }
