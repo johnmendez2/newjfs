@@ -71,6 +71,7 @@ export default function Faqs() {
             <Navbar />
             <Helmet>
             <title>Frequently asked questions ! John's Football Shirts</title>
+            <meta name="title" content="Frequently asked questions"></meta>
           <meta name="description" content="See answers to frequently asked questions about our website and also about care instructions for your football shirts." />
           <link rel="canonical" href={`https://johnsfootballshirts.com/#/FAQs`} />
             </Helmet>

@@ -146,7 +146,8 @@ productsArray.forEach((product) => {
       <div>
         <Helmet>
           <title>{prod.title}</title>
-          <meta name="description" content={prod.description} />
+          <meta name="og:title" content={prod.title}></meta>
+          <meta name="og:description" content={prod.description} />
           <link rel="canonical" href={window.location} />
         </Helmet>
         <Navbar />
@@ -155,9 +156,9 @@ productsArray.forEach((product) => {
             Free shipping in the UAE on orders over AED 200!
           </div>
           <div className="mobile-top">
-            <div className="shirtname">
-              <strong>{prod.title} {prod.condition}</strong>
-            </div>
+          <h1 className="shirtname">
+                  <strong>{prod.title} {prod.condition}</strong>
+                </h1>
             <ShowImg />
             <button className="depop-btn" onClick={() => window.open(prod.depopURL)}>BUY VIA DEPOP</button>
           </div>
@@ -206,9 +207,9 @@ productsArray.forEach((product) => {
 
               <div className="productDesc">
 
-                <div className="shirtname">
+                <h1 className="shirtname">
                   <strong>{prod.title} {prod.condition}</strong>
-                </div>
+                </h1>
                 <h2>AED {prod.price}</h2>
                 <h2 style={{ fontWeight: '200', fontSize: '20px' }}>Size: {prod.size}</h2>
                 <div className="description">
