@@ -1,0 +1,145 @@
+/* johnsFS.css */
+
+/* Styles for the "View More Case Studies" section */
+@media only screen and (min-width : 992px){
+  .view-more {
+    text-align: left;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 30px;
+    font-family: 'DM Serif Display';
+    color: #5268FF;
+    cursor: pointer;
+  }
+  
+
+  .headingtext {
+    text-align: left;
+    font-size: 3vw;
+    font-weight: bold;
+    margin-left: 30px;
+    font-family: 'DM Serif Display';
+    color: black;
+  }
+  
+  /* Styles for the image with overlay */
+  .image-with-overlay {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .image-with-overlay img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Styles for the "Problem Space" section */
+  .problem-space {
+    margin-top: 20px;
+    padding: 45px 10px 10px 10px;
+  }
+  
+  .problem-space h2 {
+    text-align: left;
+    font-size: 2.7vw;
+    font-weight: bold;
+    margin-left: 30px;
+    font-family: 'DM Serif Display';
+    color: black;
+  }
+  
+  .problem-space p {
+    text-align: left;
+    font-size: 1.7vw;
+    margin-left: 30px;
+    font-family: 'Roboto';
+    color: black;
+    width: 95%;
+  }
+  
+
+  .imgleft {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .imgleft .image-container {
+    flex: 1;
+  }
+  
+  .imgleft .text-container {
+    flex: 1;
+    text-align: left;
+    padding-right: 100px;
+  }
+  
+  .imgleft .text-container h2 {
+    text-align: left;
+    font-size: 2.7vw;
+    font-weight: bold;
+    margin-left: 30px;
+    font-family: 'DM Serif Display';
+    color: black;
+  }
+
+  .imgleft .text-container p {
+    text-align: left;
+    font-size: 1.7vw;
+    margin-left: 30px;
+    font-family: 'Roboto';
+    color: black;
+  }
+  
+}
+
+@media only screen and (max-width : 768px){
+  .view-more {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-family: 'DM Serif Display';
+    color: #374bcf;
+    cursor: pointer;
+  }
+  .headingtext {
+    text-align: left;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: 'DM Serif Display';
+    color: black;
+  }
+  .image-with-overlay {
+    position: relative;
+  }
+  
+  .image-with-overlay img {
+    width: 100%;
+    height: auto;
+  }
+  .problem-space {
+    margin-top: 20px;
+    padding: 1px 10px 10px 10px;
+  }
+  .problem-space h2 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: 'DM Serif Display';
+    color: black;
+  }
+  .problem-space p {
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: 'Roboto';
+    color: black;
+    width: 95%;
+  }
+}

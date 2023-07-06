@@ -9,7 +9,7 @@
         <loc>https://johnsfootballshirts.com/#/products</loc>
         <lastmod>2023-04-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>1</priority>
     </url>
     <url>
         <loc>https://johnsfootballshirts.com/#/FAQs</loc>
@@ -46,5 +46,17 @@
         <lastmod>2023-01-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
+    </url>
+                        <url>
+        <loc>https://johnsfootballshirts.com/#/blogs/</loc>
+        <lastmod>2023-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+                    <url>
+        <loc>https://johnsfootballshirts.com/#/blogs/RealMadridkitevolution</loc>
+        <lastmod>2023-07-06</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>1</priority>
     </url>
 </urlset>

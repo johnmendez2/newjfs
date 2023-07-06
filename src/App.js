@@ -5,6 +5,8 @@ import ShirtPage from './Pages/ShirtPage';
 import Collectionpage from './Pages/Collectionpage';
 import Faqs from './Pages/Faqs';
 import Giveaways from './Pages/Giveaways';
+import Blogs from './Pages/Blogs';
+import Realmadridkitevolution from './Pages/Blogs/RMAkitevo';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/products/:league" element={<Collectionpage />} />
         <Route path="/FAQs" element={<Faqs />} />
         <Route path="/giveaways" element={<Giveaways />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/RealMadridkitevolution" element={<Realmadridkitevolution />} />
       </Routes>
     </Router>
   );
