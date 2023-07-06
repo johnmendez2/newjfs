@@ -145,6 +145,8 @@ productsArray.forEach((product) => {
         <Helmet>
           <title>{prod.title}</title>
           <meta name="description" content={prod.description} />
+          <link rel="canonical" href={`https://johnsfootballshirts.com/${urlId}-${prod.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} />
+
         </Helmet>
         <Navbar />
         {showFooter && <div className="mobile-layout">

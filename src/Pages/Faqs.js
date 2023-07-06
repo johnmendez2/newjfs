@@ -72,6 +72,7 @@ export default function Faqs() {
             <Helmet>
             <title>Frequently asked questions ! John's Football Shirts</title>
           <meta name="description" content="See answers to frequently asked questions about our website and also about care instructions for your football shirts." />
+          <link rel="canonical" href={`https://johnsfootballshirts.com/#/FAQs`} />
             </Helmet>
             <div className="mobilefaq">
             <div className='imgrightfaq' style={{ marginTop: '4px', display: 'flex', color: 'black', backgroundColor: 'white', height: '300px' }}>

@@ -19,6 +19,7 @@ function Blogs() {
         <Helmet>
       <title>Blogs | John's Football Shirts</title>
               <meta name="description" content="Browse through beautiful football shirts past and present." />
+              <link rel="canonical" href={`https://johnsfootballshirts.com/#/blogs`} />
             </Helmet>
       <div className="image-container">
       </div>
