@@ -1,6 +1,6 @@
 import '../Css/cases.css';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function Cases(){
   const navigate = useNavigate();
 
@@ -22,7 +22,8 @@ export default function Cases(){
     return(
         <div>
         <div className='desktop'>
-        <div class="case-study" onClick={handleClickRMAkitevo}>
+        <Link to='/blogs/RealMadridkitevolution' target="_blank" style={{textDecoration:'none',color:'inherit'}}>
+        <div class="case-study">
   <h2 class="heading">The Evolution of Real Madrid Kits: From the Classic Whites to Modern Marvels</h2>
   <div class="image-container">
   <img src="https://wallpapercave.com/wp/wp1878835.jpg" alt="Case Study Image" class="image"/>
@@ -33,9 +34,8 @@ export default function Cases(){
     </div>
   </div>
 </div>
-
-
-
+          </Link>
+        
         </div>
           
         </div>

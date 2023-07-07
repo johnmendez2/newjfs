@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from "../Footer";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../Css/johnsFS.css'; // Import CSS file for custom styling
 import MobileRMAkitevo from '../Mobilepages/MobileRMAkitevo';
 import Navbar from '../Navbar';
@@ -24,9 +24,11 @@ return (
     <div className='desktop'>
     <Navbar />
 
-    <div className="view-more" onClick={() => navigate('/blogs')}>
+    <Link to='/blogs' style={{textDecoration:'none',color:'inherit'}}>
+    <div className="view-more">
       View more blogs
     </div>
+    </Link>
     <h1 className="headingtext">
     The Evolution of Real Madrid Kits: From the Classic Whites to Modern Marvels
     </h1>

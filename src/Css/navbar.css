@@ -168,6 +168,7 @@
         font-size: 25px;
         font-weight: 500;
         cursor: pointer;
+        text-decoration: none;
       }
 
     
@@ -224,6 +225,7 @@
         font-size: 25px;
         font-weight: 500;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .giveaways::before {
@@ -368,6 +370,7 @@
         text-align: right;
         text-transform: uppercase;
         display: block;
+        text-decoration: none;
       }
       
       .menu-container.open .collection:hover,

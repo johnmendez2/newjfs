@@ -5,7 +5,7 @@ import '../Css/navbar.css';
 import jfslogo from '../Assets/jfslogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -39,28 +39,20 @@ function Navbar() {
     <div>
       <div className="navbar">
         <div className="logo-container">
+          <Link to='/'>
           <img
             className="jfslogo"
             src={jfslogo}
             alt="JFS logo"
-            onClick={() => navigate(`/`)}
           />
+          </Link>
         </div>
         <div className="search-icon-container" onClick={handleSearchClick}>
           <FontAwesomeIcon icon={faSearch} />
         </div>
-        <div
-            className="collection"
-            onClick={() => navigate(`/products`)}
-          >
-            SHOP
-          </div>
-          <div className="collection" onClick={() => navigate(`/FAQs`)}>
-            FAQ'S
-          </div>
-          <div className="giveaways" onClick={() => navigate(`/blogs`)}>
-          BLOGS
-          </div>
+        <a href="/products" className="collection">SHOP</a>
+<a href="/FAQs" className="collection">FAQ'S</a>
+<a href="/blogs" className="giveaways">BLOGS</a>
           
         <div className="hamburgericon" onClick={handleMenuClick}>
           <FontAwesomeIcon color="white" icon={faBars} height={'20px'} />
@@ -68,18 +60,9 @@ function Navbar() {
 
       </div>
       <div className={`menu-container ${menuOpen ? 'open' : ''}`}>
-          <div
-            className="collection"
-            onClick={() => navigate(`/products`)}
-          >
-            SHOP
-          </div>
-          <div className="faqs" onClick={() => navigate(`/FAQs`)}>
-            FAQ'S
-          </div>
-          <div className="faqs" onClick={() => navigate(`/blogs`)}>
-          BLOGS
-          </div>
+      <a href="/products" className="collection">SHOP</a>
+<a href="/FAQs" className="faqs">FAQ'S</a>
+<a href="/blogs" className="faqs">BLOGS</a>
         </div>
       <div className={`search-container ${searchOpen ? 'open' : ''}`}>
         <form>

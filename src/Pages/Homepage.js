@@ -105,8 +105,10 @@ function Homepage() {
                 <div class="productdisplayforhighlights">
                 {products.map((product) => (
   <div className='squareboxforfeatured' style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
-    <div class="square" onClick={()=> navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)}>
+    <div class="square">
+    <Link to={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
       <img class="square-content" src={product.url} alt='featuredimage' />
+      </Link>
     </div>
     <h2 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h2>
   </div>
@@ -120,30 +122,42 @@ function Homepage() {
                 </h2>
 
                 <div class="leaguecontainer">
-                <div class="squareLeague" onClick={()=> navigate(`/products/premierleague`)}>
-                    <img class="league-content" alt='leaguelogo' src={premlogo} style={{height:'200px'}}/>
+                <div class="squareLeague">
+                  <Link to="/products/premierleague">
+                  <img class="league-content" alt='leaguelogo' src={premlogo} style={{height:'200px'}}/>
+                  </Link>
                 </div>
-                <div class="squareLeague" onClick={()=> navigate(`/products/bundesliga`)}>
-                <img class="league-content" alt='leaguelogo' src={bundesliga} style={{height:'200px'}}/>
+                <div class="squareLeague">
+                  <Link to="/products/bundesliga">
+                  <img class="league-content" alt='leaguelogo' src={bundesliga} style={{height:'200px'}}/>
+                  </Link>
                 </div>
-                <div class="squareLeague" onClick={()=> navigate(`/products/ligue1`)}>
-                <img class="league-content" alt='leaguelogo' src={ligue1} style={{height:'180px'}}/>
+                <div class="squareLeague">
+                  <Link to="/products/ligue1">
+                  <img class="league-content" alt='leaguelogo' src={ligue1} style={{height:'180px'}}/>
+                  </Link>
                 </div>
-                <div class="squareLeague" onClick={()=> navigate(`/products/laliga`)}>
-                <img class="league-content" alt='leaguelogo' src={laliga} style={{height:'200px'}}/>
+                <div class="squareLeague">
+                  <Link to="/products/laliga">
+                  <img class="league-content" alt='leaguelogo' src={laliga} style={{height:'200px'}}/>
+                  </Link>
                 </div>
-                <div class="squareLeague" onClick={()=> navigate(`/products/seriea`)}>
-                <img class="league-content" alt='leaguelogo' src={seriea} style={{height:'200px'}}/>
+                <div class="squareLeague">
+                  <Link to="/products/seriea">
+                  <img class="league-content" alt='leaguelogo' src={seriea} style={{height:'200px'}}/>
+                  </Link>
                 </div>
                 </div>
-                <h2 class='viewmore' onClick={()=> navigate(`/products/`)}>
-                VIEW MORE
-                </h2>
+                  <Link to="/products/">
+                  <h2 class='viewmore'>
+                  VIEW MORE
+                  </h2>
+                  </Link>
             </div>
             <div className='shopvintagecard' style={{ marginTop: '4px', display: 'flex', color: 'white', backgroundColor: 'black', height: '350px' }}>
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
-  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold', textDecoration:'underline', cursor: 'pointer' }} onClick={(() => navigate("/products"))}>For the fans</h2>
+  <Link to="/products"> <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold',color:'white', textDecoration:'underline', cursor: 'pointer' }}>For the fans</h2></Link>
   <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>We've got a huge range of modern and vintage football shirts from all your favorite teams - take your pick! And the best part? Our authentic jerseys are guaranteed to make you feel like part of the team without breaking the bank. So why wait? Head on over and find the perfect shirt to show off your love for football and your favorite players.</p>
 </div>
   </div>
@@ -170,7 +184,7 @@ function Homepage() {
   </div>
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
   <div className='textboxborder'>
-  <h2 style={{ marginBottom: '10px', fontSize: '2.2rem', fontWeight: 'bold', textDecoration:'underline', cursor: 'pointer' }} onClick={(() => navigate("/products/grl"))}>For the collectors</h2>
+  <Link to="/products/grl"><h2 style={{ marginBottom: '10px', fontSize: '2.2rem', color:'white',fontWeight: 'bold', textDecoration:'underline', cursor: 'pointer' }}>For the collectors</h2></Link>
   <p className='textinsquare' style={{ fontSize: '1.2rem', width: '95%' }}>Immerse yourself in our vast assortment of one-of-a-kind jerseys, spanning the rich history of football's past and present. From rare vintage gems to modern classics, our curated collection is a treasure trove for collectors. Indulge your passion, expand your collection, and showcase your love for football through these captivating pieces of history.</p>
 </div>
   </div>
