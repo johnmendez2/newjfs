@@ -74,7 +74,7 @@ function Navbar() {
             className="jfslogo"
             src={jfslogo}
             alt="JFS logo"
-          />
+          ></img>
           </Link>
         </div>
         <div className="search-icon-container" onClick={handleSearchClick}>

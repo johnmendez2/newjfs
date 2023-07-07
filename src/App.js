@@ -6,6 +6,7 @@ import Collectionpage from './Pages/Collectionpage';
 import Faqs from './Pages/Faqs';
 import Blogs from './Pages/Blogs';
 import Realmadridkitevolution from './Pages/Blogs/RMAkitevo';
+import Worldcup from './Pages/Blogs/WorldCup';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/FAQs" element={<Faqs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/RealMadridkitevolution" element={<Realmadridkitevolution />} />
+        <Route path="/blogs/WorldCup" element={<Worldcup />} />
       </Routes>
     </Router>
   );
