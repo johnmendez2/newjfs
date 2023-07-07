@@ -60,14 +60,14 @@ export default function MobileRMAkitevo(){
       <div className="problem-space" >
         <div className="problem-space">
         <h2>The El Clásico Rivalry</h2>
-      <p>No article on Real Madrid's jerseys would be complete without mentioning their fierce rivalry with <a class="purpletext" style={{cursor:'pointer'}} href="https://johnsfootballshirts.com/#/products/search=fc%20barcelona">FC Barcelona</a>. The clashes between these two Spanish giants have provided football fans with some of the most memorable moments in the sport's history. As Real Madrid faced Barcelona in El Clásico matches, the jerseys worn by the players took on added significance. These iconic encounters saw the clash of the traditional white of Real Madrid against the iconic blaugrana (blue and claret) stripes of Barcelona, creating a visual spectacle that resonates with fans across the globe.
+      <p>No article on Real Madrid's jerseys would be complete without mentioning their fierce rivalry with <a class="purpletext" style={{cursor:'pointer'}} href="https://johnsfootballshirts.com/products/search=fc%20barcelona">FC Barcelona</a>. The clashes between these two Spanish giants have provided football fans with some of the most memorable moments in the sport's history. As Real Madrid faced Barcelona in El Clásico matches, the jerseys worn by the players took on added significance. These iconic encounters saw the clash of the traditional white of Real Madrid against the iconic blaugrana (blue and claret) stripes of Barcelona, creating a visual spectacle that resonates with fans across the globe.
         </p> 
 </div>
 
 <div className="problem-space" >
 <h2>Conclusion</h2>
 <p>
-Real Madrid's jerseys have evolved alongside the club's legacy, reflecting its rich history and illustrious achievements. From the classic all-white design to embracing cutting-edge technology, these jerseys represent the spirit of Real Madrid. Whether you're a passionate Real Madrid fan or a football enthusiast, the evolution of these jerseys is a testament to the club's enduring legacy. And let's not forget the intense rivalry with FC Barcelona, which adds anexciting dynamic to the narrative of Real Madrid's jersey evolution. </p>      </div>
+Real Madrid's jerseys have evolved alongside the club's legacy, reflecting its rich history and illustrious achievements. From the classic all-white design to embracing cutting-edge technology, these jerseys represent the spirit of Real Madrid. Whether you're a passionate Real Madrid fan or a football enthusiast, the evolution of these jerseys is a testament to the club's enduring legacy. And let's not forget the intense rivalry with FC Barcelona, which adds an exciting dynamic to the narrative of Real Madrid's jersey evolution. </p>      </div>
 
       </div>
       
