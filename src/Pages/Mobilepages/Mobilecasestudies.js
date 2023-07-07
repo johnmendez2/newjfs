@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Mobilecases(){
     const navigate = useNavigate();
@@ -24,6 +24,20 @@ export default function Mobilecases(){
   </div>
 </div>
 
+
+<Link to='/blogs/WorldCup' target="_blank" style={{textDecoration:'none',color:'inherit'}}>
+        <div class="case-study">
+  <h2 class="heading">International Football: Celebrating FIFA World Cup and Global Powerhouses </h2>
+  <div class="image-container">
+  <img src="https://images8.alphacoders.com/128/1288503.jpg" alt="Case Study Image" class="image"/>
+</div> 
+ <div class="details">
+    <div class="leftside">
+      <p class="desc">International football has evolved into a global phenomenon, captivating fans around the world with its thrilling matches and the prestigious FIFA World Cup. From the rise of emerging teams to the continued dominance of perennial powerhouses, international football has undergone remarkable improvements. In this article, we explore the evolution of international football, with a particular focus on the FIFA World Cup and the exciting journey towards the FIFA World Cup 2026.<span class="purpletext" style={{cursor:'pointer'}}>&nbsp; Read more here!</span></p>
+    </div>
+  </div>
+</div>
+          </Link>
 
 </div>
       )
