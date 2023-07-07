@@ -175,16 +175,16 @@ productsArray.forEach((product) => {
             </div>
           </div>
           <div class="highlights" style={{height:'380px'}}>
-            <h1 className='featuretext' style={{ fontSize: '30px', color: 'black', display: 'flex', marginLeft: '50px', paddingTop: '5px', paddingBottom: '10px' }}>
+            <h2 className='featuretext' style={{ fontSize: '30px', color: 'black', display: 'flex', marginLeft: '50px', paddingTop: '5px', paddingBottom: '10px' }}>
               More you might like:
-            </h1>
+            </h2>
             <div class="productdisplayforhighlights">
               {products.map((product) => (
                 <div className='squareboxforfeatured' style={{ padding: '10px', marginLeft: '25px', marginRight: '25px' }}>
                   <div class="square" onClick={() => navigateToProduct(product)}>
                     <img class="square-content" src={product.url} alt='featuredimage' />
                   </div>
-                  <h1 className='featuredcontenttext' style={{ textAlign: "center", fontSize: '1.2rem', minHeight: '42px' }}>{product.title}</h1>
+                  <h2 className='featuredcontenttext' style={{ textAlign: "center", fontSize: '1.2rem', minHeight: '42px' }}>{product.title}</h2>
                 </div>
               ))}
             </div>

@@ -23,7 +23,7 @@ export default function Cases(){
         <div>
         <div className='desktop'>
         <div class="case-study" onClick={handleClickRMAkitevo}>
-  <h1 class="heading">The Evolution of Real Madrid Kits: From the Classic Whites to Modern Marvels</h1>
+  <h2 class="heading">The Evolution of Real Madrid Kits: From the Classic Whites to Modern Marvels</h2>
   <div class="image-container">
   <img src="https://wallpapercave.com/wp/wp1878835.jpg" alt="Case Study Image" class="image"/>
 </div> 

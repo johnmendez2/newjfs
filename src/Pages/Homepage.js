@@ -108,16 +108,16 @@ function Homepage() {
     <div class="square" onClick={()=> navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)}>
       <img class="square-content" src={product.url} alt='featuredimage' />
     </div>
-    <h1 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h1>
+    <h2 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h2>
   </div>
 ))}
 
                 </div>
             </div>
             <div className='shopbyleague' >
-            <h1 style={{fontSize: '26px', color: 'white', display: 'flex', marginLeft: '20px', paddingTop: '20px', paddingBottom: '10px'}}>
+            <h2 style={{fontSize: '26px', color: 'white', display: 'flex', marginLeft: '20px', paddingTop: '20px', paddingBottom: '10px'}}>
                 Shop by league
-                </h1>
+                </h2>
 
                 <div class="leaguecontainer">
                 <div class="squareLeague" onClick={()=> navigate(`/products/premierleague`)}>
@@ -136,9 +136,9 @@ function Homepage() {
                 <img class="league-content" alt='leaguelogo' src={seriea} style={{height:'200px'}}/>
                 </div>
                 </div>
-                <h1 class='viewmore' onClick={()=> navigate(`/products/`)}>
+                <h2 class='viewmore' onClick={()=> navigate(`/products/`)}>
                 VIEW MORE
-                </h1>
+                </h2>
             </div>
             <div className='shopvintagecard' style={{ marginTop: '4px', display: 'flex', color: 'white', backgroundColor: 'black', height: '350px' }}>
   <div className='cardhalfwithtextbox' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%' }}>
