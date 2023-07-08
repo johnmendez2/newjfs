@@ -44,7 +44,7 @@ export default function CollectionPage() {
         const fuse = new Fuse(products, {
           keys: ['title','league'],
           includeScore: true,
-          threshold: 0.4,
+          threshold: 0.2,
           ignoreLocation: true,
           ignoreFieldNorm: true
         })

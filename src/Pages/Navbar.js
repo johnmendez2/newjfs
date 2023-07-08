@@ -11,7 +11,7 @@ function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchClicked, setSearchClicked] = useState(false);
-  const popularSearches = ['fc barcelona', 'international', 'liverpool'];
+  const popularSearches = ['fc barcelona', 'messi', 'liverpool'];
   const navigate = useNavigate();
   const defaultOptions = {
     loop: true,
