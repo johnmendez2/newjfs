@@ -213,14 +213,14 @@ productsArray.forEach((product) => {
                 </h1>
                 <h2>AED {prod.price}</h2>
                 <h2 style={{ fontWeight: '200', fontSize: '20px' }}>Size: {prod.size}</h2>
-                <div className="description">
+                <p className="description">
                   {prod.description}
-                </div>
+                </p>
                 <button className="depop-btn" onClick={() => window.open(prod.depopURL)}>BUY VIA DEPOP</button>
-                <h2>Shipping:</h2>
-                <div className="description">
+                <h3>Shipping:</h3>
+                <p className="description">
                   Delivery all over the UAE for AED 25. Free delivery on orders over AED 200.
-                </div>
+                </p>
               </div>
             </div>
           </div>

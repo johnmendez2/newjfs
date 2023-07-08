@@ -20,6 +20,8 @@ function Blogs() {
       <title>Blogs | John's Football Shirts</title>
               <meta name="description" content="Read through our blogs and articles of football culture." />
               <meta name="og:description" content="Read through our blogs and articles of football culture." />
+              <link rel="canonical" href={`https://johnsfootballshirts.com/blogs`} />
+
             </Helmet>
       <div className="image-container">
       </div>

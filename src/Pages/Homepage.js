@@ -78,7 +78,6 @@ function Homepage() {
           {/* Add your meta tags here */}
           <meta name="description" content="Shop a wide range of authentic football shirts in Dubai. Find jerseys from top teams and players. Free shipping on orders over AED 200. Explore our collection now!" />
   <meta name="keywords" content="football shirts, jerseys, Dubai, buy online, authentic, top teams, players, free shipping" />
-  <link rel="canonical" href="https://johnsfootballshirts.com/#" />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -110,7 +109,7 @@ function Homepage() {
       <img class="square-content" src={product.url} alt='featuredimage' />
       </Link>
     </div>
-    <h2 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h2>
+    <h3 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h3>
   </div>
 ))}
 
@@ -149,9 +148,9 @@ function Homepage() {
                 </div>
                 </div>
                   <Link to="/products/">
-                  <h2 class='viewmore'>
+                  <h4 class='viewmore'>
                   VIEW MORE
-                  </h2>
+                  </h4>
                   </Link>
             </div>
             <div className='shopvintagecard' style={{ marginTop: '4px', display: 'flex', color: 'white', backgroundColor: 'black', height: '350px' }}>
