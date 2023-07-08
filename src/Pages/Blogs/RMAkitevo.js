@@ -75,7 +75,7 @@ return (
 
     <div className="problem-space" >
       <h2>The El Clásico Rivalry</h2>
-      <p>No article on Real Madrid's jerseys would be complete without mentioning their fierce rivalry with <a class="purpletext" style={{cursor:'pointer'}} href="https://johnsfootballshirts.com/products/search=fc%20barcelona">FC Barcelona</a>. The clashes between these two Spanish giants have provided football fans with some of the most memorable moments in the sport's history. As Real Madrid faced Barcelona in El Clásico matches, the jerseys worn by the players took on added significance. These iconic encounters saw the clash of the traditional white of Real Madrid against the iconic blaugrana (blue and claret) stripes of Barcelona, creating a visual spectacle that resonates with fans across the globe.
+      <p>No article on Real Madrid's jerseys would be complete without mentioning their fierce rivalry with <a class="purpletext" style={{cursor:'pointer'}} href="https://johnsfootballshirts.com/products/search=barcelona">FC Barcelona</a>. The clashes between these two Spanish giants have provided football fans with some of the most memorable moments in the sport's history. As Real Madrid faced Barcelona in El Clásico matches, the jerseys worn by the players took on added significance. These iconic encounters saw the clash of the traditional white of Real Madrid against the iconic blaugrana (blue and claret) stripes of Barcelona, creating a visual spectacle that resonates with fans across the globe.
         </p>    
         </div>
 
