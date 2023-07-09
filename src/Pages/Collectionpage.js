@@ -23,17 +23,14 @@ export default function CollectionPage() {
       // Check if league parameter is provided in the URL
       if (location.pathname.split("/")[2] && location.pathname.split("/")[2] === 'grl'){
         query = query.where("grail", "==",  "yes")
-        console.log("working")
       }
       if (location.pathname.split("/")[2] && location.pathname.split("/")[2].length > 3) {
         league = location.pathname.split("/")[2];
         query = query.where("league", "==", league);
       }
-      console.log(query)
       
       // Check if search parameter is provided in the URL
       const search = window.location.href.split("search=")[1];
-      console.log(search)
       if (search) {
         const allProducts = await fs.collection("NEWwebsiteProducts").get();
         const products = allProducts.docs.map((doc) => ({
@@ -54,8 +51,6 @@ export default function CollectionPage() {
       }
       else {
         const products = await query.get();
-
-        console.log("Products:", products.docs);
         const productsArray = [];
         products.docs.forEach((doc) => {
           productsArray.push({ id: doc.id, ...doc.data() });

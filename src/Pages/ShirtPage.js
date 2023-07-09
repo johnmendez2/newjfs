@@ -9,26 +9,50 @@ import ImageGallery from 'react-image-gallery';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
+async function fetchProductData(urlId) {
+  try {
+    const docRef = fs.collection("NEWwebsiteProducts").doc(urlId);
+    const doc = await docRef.get();
+    return doc.exists; // Return whether the document exists or not
+  } catch (error) {
+    console.log("Error getting document:", error);
+    return false;
+  }
+}
+
 export default function ShirtPage() {
   const location = useLocation();
   const urlId = location.pathname.split('-')[0].split('/').pop().slice(-20);
-  const navigate = useNavigate();
   const [prod, setProduct] = useState('');
   const [products, setProducts] = useState([]);
-  async function getProd() {
-    try {
-      const docRef = fs.collection("NEWwebsiteProducts").doc(urlId);
-      const doc = await docRef.get();
-      if (doc.exists) {
-        const a = doc.data();
-        setProduct(a);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    async function getProd() {
+      const isProductExists = await fetchProductData(urlId);
+      if (isProductExists) {
+        try {
+          const docRef = fs.collection("NEWwebsiteProducts").doc(urlId);
+          const doc = await docRef.get();
+          if (doc.exists) {
+            const a = doc.data();
+            setProduct(a);
+          } else {
+            console.log("No such document!");
+            navigate("/"); // Redirect to homepage if document doesn't exist
+          }
+        } catch (error) {
+          console.log("Error getting document:", error);
+          navigate("/"); // Redirect to homepage on error
+        }
       } else {
-        console.log("No such document!");
+        console.log("Product not found!");
+        navigate("/"); // Redirect to homepage if product doesn't exist in Firebase
       }
-    } catch (error) {
-      console.log("Error getting document:", error);
     }
-  }
+
+    getProd();
+  }, [urlId, navigate]);
 
   function ShowImg() {
     if (prod.imgurl2 == "") {
@@ -93,7 +117,6 @@ productsArray.forEach((product) => {
   if (!idSet.has(product.id)) {
     idSet.add(product.id);
     filteredProductsArray.push(product);
-    console.log(product)
   }
 });
         // Filter out objects with the same title as prod.title
@@ -117,10 +140,6 @@ productsArray.forEach((product) => {
   }, [prod.price, prod.league]);
 
 
-
-  useEffect(() => {
-    getProd();
-  }, [])
   useEffect(() => {
   }, [prod])
 
