@@ -1,6 +1,6 @@
 import animationData from '../Assets/126279-soccer-sport-trophy-with-soccer-ball-and-shoes.json';
 import Lottie from 'react-lottie';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function Mission() {
   const navigate = useNavigate();
   const navigatetoFAQ = () => {
@@ -39,9 +39,9 @@ export default function Mission() {
         We believe in making football shirt collecting accessible to everyone. Our mission is to spread the love of
         football in a passionate community. We bring the game closer by offering authentic shirts at affordable prices.
         For any questions, check out the{' '}
-        <span style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }} onClick={navigatetoFAQ}>
-          FAQ page
-        </span> or contact us for more info.
+        <Link to="https://www.johnsfootballshirts.com/FAQs" style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }}>
+          FAQ 
+        </Link> page or contact us for more info.
          Join us on our mission, Joga Bonito!
          </p>
       </div>
