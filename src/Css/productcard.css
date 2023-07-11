@@ -56,6 +56,18 @@
   color: white;
 }
 
+
+.product-card .original-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+  
+}
+
+.product-card .discounted-price {
+  font-weight: 700;
+  color: red;
+}
+
 @media screen and (max-width: 768px) {
   .product-card {
     max-width: 95%;
@@ -70,5 +82,15 @@
       align-self: center;
       width: 80%;
 
+  }
+
+  .product-card .original-price {
+    text-decoration: line-through;
+    margin-right: 5px;
+  }
+  
+  .product-card .discounted-price {
+    font-weight: 700;
+    color: red;
   }
 }

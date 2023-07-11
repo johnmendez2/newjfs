@@ -76,6 +76,16 @@
   .mobile-layout{
     display: none;
   }
+
+  .original-price {
+    text-decoration: line-through;
+    margin-right: 5px;
+  }
+  
+  .discounted-price {
+    font-weight: bold;
+    color: red; /* Add this line to set the color to green */
+  }
   
   @media (max-width: 768px) {
     .squareShirtPage {
@@ -140,6 +150,16 @@
     width: 25px;
     margin-top: 30px;
 }
+
+.original-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+.discounted-price {
+  font-weight: bold;
+  color: red; /* Add this line to set the color to green */
+}
   }
 
 @media only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -158,6 +178,15 @@
   -o-user-select: none;
   user-select: none;
   width: 100%;
+}
+.original-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+.discounted-price {
+  font-weight: bold;
+  color: red; /* Add this line to set the color to green */
 }
   }
   

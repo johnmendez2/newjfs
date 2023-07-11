@@ -184,7 +184,14 @@ productsArray.forEach((product) => {
           </div>
           <div className="mobile-bottom">
             <h2>Size: {prod.size}</h2>
-            <h2> Price: AED {prod.price}</h2>
+            {prod.discountedPrice ? (
+  <h2>
+    <span className="original-price">AED {prod.price}</span>
+    <span className="discounted-price">AED {prod.discountedPrice}</span>
+  </h2>
+) : (
+  <h2>AED {prod.price}</h2>
+)}
             <div className="description">
               {prod.description}
             </div>
@@ -230,7 +237,14 @@ productsArray.forEach((product) => {
                 <h1 className="shirtname">
                   <strong>{prod.title} {prod.condition}</strong>
                 </h1>
-                <h2>AED {prod.price}</h2>
+                {prod.discountedPrice ? (
+  <h2>
+    <span className="original-price">AED {prod.price}</span>
+    <span className="discounted-price">AED {prod.discountedPrice}</span>
+  </h2>
+) : (
+  <h2>AED {prod.price}</h2>
+)}
                 <h2 style={{ fontWeight: '200', fontSize: '20px' }}>Size: {prod.size}</h2>
                 <p className="description">
                   {prod.description}
