@@ -19,7 +19,9 @@ export default function CollectionPage() {
   useEffect(() => {
     const getProducts = async () => {
       let query = fs.collection("NEWwebsiteProducts").where("appear", "==", "yes");
-
+      if (location.pathname.split("/")[2] && location.pathname.split("/")[2] === 'new') {
+        query = query.where("latest", "==", "yes")
+      }
       // Check if league parameter is provided in the URL
       if (location.pathname.split("/")[2] && location.pathname.split("/")[2] === 'grl') {
         query = query.where("grail", "==", "yes")

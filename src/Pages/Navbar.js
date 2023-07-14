@@ -80,6 +80,7 @@ function Navbar() {
         <div className="search-icon-container" onClick={handleSearchClick}>
           <FontAwesomeIcon icon={faSearch} />
         </div>
+        <a href="/products/new" className="collection">NEW&nbsp;&nbsp;ARRIVALS</a>
         <a href="/products" className="collection">SHOP</a>
 <a href="/FAQs" className="collection">FAQ'S</a>
 <a href="/blogs" className="giveaways">BLOGS</a>
@@ -90,6 +91,7 @@ function Navbar() {
 
       </div>
       <div className={`menu-container ${menuOpen ? 'open' : ''}`}>
+      <a href="/products/new" className="collection">NEW&nbsp;&nbsp;ARRIVALS</a>
       <a href="/products" className="collection">SHOP</a>
 <a href="/FAQs" className="faqs">FAQ'S</a>
 <a href="/blogs" className="faqs">BLOGS</a>
