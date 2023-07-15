@@ -106,15 +106,15 @@ export default function CollectionPage() {
                 {sortedProducts.length > 0 ? (
                   sortedProducts.map((product) => (
                     <ProductCard
-                      key={product.id}
-                      imageSrc={product.url}
-                      productName={product.title}
-                      price={product.price}
-                      discountedPrice={product.discountedPrice} // Add this line
-                      size={product.size}
-                      url={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                    />
-
+                    key={product.id}
+                    imageSrc={product.url}
+                    imageSrc2={product.imgurl2} // Pass the second image URL prop
+                    productName={product.title}
+                    price={product.price}
+                    discountedPrice={product.discountedPrice}
+                    size={product.size}
+                    url={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  />
                   ))
                 ) : (
                   <h2>Your search returned no results.</h2>

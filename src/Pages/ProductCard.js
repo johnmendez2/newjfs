@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Css/productcard.css";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function ProductCard(props) {
   const navigate = useNavigate();
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   return (
     <Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>
-      <div className="product-card">
+      <div
+        className={`product-card ${hovered ? "hovered" : ""}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="product-image">
           <img src={props.imageSrc} alt={props.productName} />
+          {props.imageSrc2 && (
+            <img
+              src={props.imageSrc2}
+              alt={props.productName}
+              className={`second-image ${hovered ? "show" : ""}`}
+            />
+          )}
         </div>
         <div className="product-name">{props.productName}</div>
         <div className="product-size">{props.size}</div>
