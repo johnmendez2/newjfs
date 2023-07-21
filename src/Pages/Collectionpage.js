@@ -16,6 +16,8 @@ export default function CollectionPage() {
   const [isFetching, setIsFetching] = useState(true);
   let league = "";
 
+  
+
   useEffect(() => {
     const getProducts = async () => {
       let query = fs.collection("NEWwebsiteProducts").where("appear", "==", "yes");
@@ -73,6 +75,29 @@ export default function CollectionPage() {
     sortedProducts.sort((a, b) => b.price - a.price); // Sort by price descending
   }
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 9;
+
+  // Calculate the total number of pages based on the total number of products
+  const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
+
+  // Slice the products array to display only the products for the current page
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = sortedProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+  // Function to handle page navigation
+  const handlePageChange = (pageNumber) => {
+    if (pageNumber >= 1 && pageNumber <= totalPages) {
+      setCurrentPage(pageNumber);
+      // Scroll to the top of the page when the user clicks a pagination button
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <HelmetProvider>
       <div>
@@ -87,7 +112,7 @@ export default function CollectionPage() {
             <h2 style={{ textAlign: 'center' }}>Fetching products...</h2>
           ) : (
             <>
-              <h2 className="showing">Showing {products.length} {products.length > 1 ? "products" : "product"}</h2>
+              <h2 className="showing">Showing {currentProducts.length} {currentProducts.length > 1 ? "products" : "product"}</h2>
               <div className="product-cards-container">
                 {sortedProducts.length > 1 && (
                   <div className="sort-container">
@@ -103,9 +128,10 @@ export default function CollectionPage() {
                     </select>
                   </div>
                 )}
-                {sortedProducts.length > 0 ? (
-                  sortedProducts.map((product) => (
-                    <ProductCard
+              {sortedProducts.length > 0 ? (
+                // Use currentProducts instead of sortedProducts here
+                currentProducts.map((product) => (
+                  <ProductCard
                     key={product.id}
                     imageSrc={product.url}
                     imageSrc2={product.imgurl2} // Pass the second image URL prop
@@ -115,11 +141,40 @@ export default function CollectionPage() {
                     size={product.size}
                     url={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                   />
-                  ))
-                ) : (
-                  <h2>Your search returned no results.</h2>
-                )}
+                ))
+              ) : (
+                <h2>Your search returned no results.</h2>
+              )}
               </div>
+                          {/* Pagination */}
+            <div className="pagination">
+              {/* Previous arrow */}
+              <button
+                className="pagination-button pagination-arrow"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                &lt;
+              </button>
+              {/* Page numbers */}
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  className={`pagination-button ${page === currentPage ? 'active' : ''}`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  {page}
+                </button>
+              ))}
+              {/* Next arrow */}
+              <button
+                className="pagination-button pagination-arrow"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                &gt;
+              </button>
+            </div>
             </>
           )}
         </div>
