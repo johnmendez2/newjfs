@@ -92,7 +92,7 @@
 
 .product-card .discounted-price {
   font-weight: 700;
-  color: red;
+  color: #2d9f00;
 }
 
 @media screen and (max-width: 768px) {
