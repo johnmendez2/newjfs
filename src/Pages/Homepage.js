@@ -5,6 +5,8 @@ import { fs } from '../Config/config';
 import Footer from './Footer';
 import Mission from './MIssion';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import LazyLoad from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import animationData from '../Assets/129328-sport-fans-watching-match-on-tv.json';
 import animationData2 from '../Assets/126572-football-team-players.json';

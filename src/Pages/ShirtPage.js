@@ -158,7 +158,16 @@ productsArray.forEach((product) => {
   }, []);
 
 
+  const [startIndex, setStartIndex] = useState(0);
 
+
+  const handlePrev = () => {
+    setStartIndex((prevIndex) => Math.max(prevIndex - 3, 0));
+  };
+
+  const handleNext = () => {
+    setStartIndex((prevIndex) => Math.min(prevIndex + 3, products.length - 1));
+  };
 
   return (
     <HelmetProvider>
@@ -256,7 +265,27 @@ productsArray.forEach((product) => {
                 </p>
               </div>
             </div>
+            
           </div>
+          <div className="highlights" style={{ height: '680px' }}>
+      <h2 className="featuretext" style={{ fontSize: '28px', color: 'black', display: 'flex', marginLeft: '50px', paddingTop: '105px', paddingBottom: '10px' }}>
+        More you might like:
+      </h2>
+      <div className="productdisplayforhighlights" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <button onClick={handlePrev} style={{ fontSize: '50px', color: 'black', background: 'none', border: 'none', cursor: 'pointer', position: 'absolute', left: '9vw', top: '50%', transform: 'translateY(-50%)' }}>{"<"}</button>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8vw' }}>
+          {products.slice(startIndex, startIndex + 3).map((product) => (
+            <div className="squareboxforfeatured" key={product.id} style={{ padding: '10px' }}>
+              <div className="square" style={{ height: '300px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => navigateToProduct(product)}>
+                <img className="square-content" style={{ height: '300px', maxWidth: '100%' }} src={product.url} alt="featuredimage" />
+              </div>
+              <h2 className="featuredcontenttext" style={{ textAlign: 'center', fontSize: '16px', minHeight: '42px', width: '300px'  }}>{product.title}</h2>
+            </div>
+          ))}
+        </div>
+          <button onClick={handleNext} style={{ fontSize: '50px', color: 'black', background: 'none', border: 'none', cursor: 'pointer', position: 'absolute', right: '9vw', top: '50%', transform: 'translateY(-50%)' }}>{">"}</button>
+      </div>
+    </div>
         </div>}
         <Footer />
       </div>

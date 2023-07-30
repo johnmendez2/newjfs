@@ -22,7 +22,8 @@ export default function ProductCard(props) {
         onMouseLeave={handleMouseLeave}
       >
         <div className="product-image">
-          <img src={props.imageSrc} alt={props.productName} />
+        <img src={props.imageSrc}
+        alt={props.productName} />
           {props.imageSrc2 && (
             <img
               src={props.imageSrc2}
