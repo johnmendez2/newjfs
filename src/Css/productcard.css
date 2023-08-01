@@ -148,7 +148,7 @@
     align-self: center;
     width: 80%;
     position: relative; /* Add this line to make the child elements positioned relative to the product-image */
-
+    color: white;
 
   }
 
