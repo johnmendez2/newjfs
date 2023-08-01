@@ -4,10 +4,14 @@ import '../Css/shirtpage.css'
 import Footer from "./Footer";
 import { fs } from '../Config/config';
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ImageGallery from 'react-image-gallery';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import { doc, updateDoc, increment } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 async function fetchProductData(urlId) {
   try {
@@ -75,6 +79,7 @@ export default function ShirtPage() {
       return <ImageGallery className="square-contentShirtPage" items={images} />;
     }
   }
+  
 
 
   useEffect(() => {
@@ -169,11 +174,38 @@ productsArray.forEach((product) => {
     setStartIndex((prevIndex) => Math.min(prevIndex + 3, products.length - 1));
   };
 
+  const handleProductView = async (productId) => {
+    try {
+      // Get a reference to the Firestore document
+      const db = getFirestore();
+      const productRef = doc(db, 'NEWwebsiteProducts', productId);
+  
+      // Log the productRef to ensure it's valid
+      console.log('Product Reference:', productRef);
+  
+      // Update the "views" field using the updateDoc function with an atomic increment
+      await updateDoc(productRef, { views: increment(1) });
+  
+      console.log('Firestore update successful.');
+    } catch (error) {
+      console.error('Firestore update error:', error);
+    }
+    window.location.reload(); // Force a full page refresh
+  };
+
+  const handleClick = async (productID) => {
+    console.log('Product ID to update views:', productID); // Ensure that the product ID is correct
+  
+    // Call the handleProductView function to update views
+    handleProductView(productID);
+  };
+
+
   return (
     <HelmetProvider>
       <div>
         <Helmet>
-          <title>{prod.title}</title>
+          <title>{prod.title}</title>        
           <meta name="og:title" content={prod.title}></meta>
           <meta name="og:description" content={prod.description} />
           <meta name="description" content={prod.description} />
@@ -216,7 +248,7 @@ productsArray.forEach((product) => {
             <div class="productdisplayforhighlights">
               {products.map((product) => (
                 <div className='squareboxforfeatured' style={{ padding: '10px', marginLeft: '25px', marginRight: '25px' }}>
-                  <div class="square" onClick={() => navigateToProduct(product)}>
+                  <div class="square" onClick={() =>  {handleClick(product);}}>
                     <img class="square-content" src={product.url} alt='featuredimage' />
                   </div>
                   <h2 className='featuredcontenttext' style={{ textAlign: "center", fontSize: '1.2rem', minHeight: '42px' }}>{product.title}</h2>
@@ -235,6 +267,7 @@ productsArray.forEach((product) => {
             <div style={{ flex: 1 }}>
               {/* Product images go here */}
               <div className="squareShirtPage">
+                
                 <ShowImg />
               </div>
             </div>
@@ -245,10 +278,11 @@ productsArray.forEach((product) => {
 
                 <h1 className="shirtname">
                   <strong>{prod.title} {prod.condition}</strong>
+                  
                 </h1>
                 {prod.discountedPrice ? (
   <h2>
-    <span className="original-price">AED {prod.price}</span>
+    <span className="original-price">AED {prod.price} </span>
     <span className="discounted-price">AED {prod.discountedPrice}</span>
   </h2>
 ) : (
@@ -276,8 +310,10 @@ productsArray.forEach((product) => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8vw' }}>
           {products.slice(startIndex, startIndex + 3).map((product) => (
             <div className="squareboxforfeatured" key={product.id} style={{ padding: '10px' }}>
-              <div className="square" style={{ height: '300px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => navigateToProduct(product)}>
-                <img className="square-content" style={{ height: '300px', maxWidth: '100%' }} src={product.url} alt="featuredimage" />
+              <div className="square" style={{ height: '300px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Link to={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+                <img className="square-content" style={{ height: '300px', maxWidth: '100%' }} src={product.url} alt="featuredimage" onClick={() => {handleClick(product.id)}}/>
+                </Link>
               </div>
               <h2 className="featuredcontenttext" style={{ textAlign: 'center', fontSize: '16px', minHeight: '42px', width: '300px'  }}>{product.title}</h2>
             </div>

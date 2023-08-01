@@ -5,8 +5,8 @@ import { fs } from '../Config/config';
 import Footer from './Footer';
 import Mission from './MIssion';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import LazyLoad from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { doc, updateDoc, increment } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 
 import animationData from '../Assets/129328-sport-fans-watching-match-on-tv.json';
 import animationData2 from '../Assets/126572-football-team-players.json';
@@ -69,6 +69,36 @@ function Homepage() {
         getProducts();
       }, []);
 
+      function navigateToProduct(product){
+        navigate(`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
+        window.location.reload()
+      }
+
+      const handleProductView = async (productId) => {
+        try {
+          // Get a reference to the Firestore document
+          const db = getFirestore();
+          const productRef = doc(db, 'NEWwebsiteProducts', productId);
+      
+          // Log the productRef to ensure it's valid
+          console.log('Product Reference:', productRef);
+      
+          // Update the "views" field using the updateDoc function with an atomic increment
+          await updateDoc(productRef, { views: increment(1) });
+      
+          console.log('Firestore update successful.');
+        } catch (error) {
+          console.error('Firestore update error:', error);
+        }
+      };
+    
+      const handleClick = async (productID) => {
+        console.log('Product ID to update views:', productID); // Ensure that the product ID is correct
+      
+        // Call the handleProductView function to update views
+        handleProductView(productID);
+      };
+
     return (
       <HelmetProvider>
         <div >
@@ -108,7 +138,7 @@ function Homepage() {
   <div className='squareboxforfeatured' style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
     <div class="square">
     <Link to={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-      <img class="square-content" src={product.url} alt='featuredimage' />
+      <img class="square-content" src={product.url} alt='featuredimage' onClick={() => {handleClick(product.id)}} />
       </Link>
     </div>
     <h3 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h3>

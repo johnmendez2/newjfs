@@ -84,7 +84,7 @@
   
   .discounted-price {
     font-weight: bold;
-    color: red; /* Add this line to set the color to green */
+    color: #2d9f00; /* Add this line to set the color to green */
   }
   
   @media (max-width: 768px) {
@@ -158,7 +158,7 @@
 
 .discounted-price {
   font-weight: bold;
-  color: red; /* Add this line to set the color to green */
+  color: #2d9f00; /* Add this line to set the color to green */
 }
   }
 

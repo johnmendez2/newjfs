@@ -7,6 +7,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Fuse from 'fuse.js';
 import "../Css/collectionpage.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { doc, updateDoc, increment } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 
 export default function CollectionPage() {
   const [products, setProducts] = useState([]);
@@ -137,9 +139,11 @@ export default function CollectionPage() {
                     imageSrc2={product.imgurl2} // Pass the second image URL prop
                     productName={product.title}
                     price={product.price}
+                    views ={product.views}
                     discountedPrice={product.discountedPrice}
                     size={product.size}
                     url={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                    productId={product.id} // Pass the productId prop to ProductCard
                   />
                 ))
               ) : (
