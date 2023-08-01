@@ -138,7 +138,7 @@ function Homepage() {
   <div className='squareboxforfeatured' style={{padding: '10px', marginLeft: '25px', marginRight:'25px'}}>
     <div class="square">
     <Link to={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-      <img class="square-content" src={product.url} alt='featuredimage' onClick={() => {handleClick(product.id)}} />
+      <img class="square-content" src={product.t1} alt='featuredimage' onClick={() => {handleClick(product.id)}} />
       </Link>
     </div>
     <h3 className='featuredcontenttext' style={{textAlign: "center", fontSize:'1.2rem', minHeight: '42px'}}>{product.title}</h3>

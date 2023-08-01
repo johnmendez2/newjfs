@@ -37,6 +37,13 @@ export default function ProductCard(props) {
     handleProductView(); // Call the handleProductView function to update views
   };
 
+    // State to track if the full-resolution image is loaded
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    // Event handler for when the full-resolution image is loaded
+    const handleImageLoad = () => {
+      setImageLoaded(true);
+    };
   return (
     <Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>
       <div
@@ -53,7 +60,9 @@ export default function ProductCard(props) {
   </div>
         {/* Rest of the product card content */}
         <div className="product-image">
-          <img src={props.imageSrc} alt={props.productName} />
+          <img src={props.imageSrc} alt={props.productName} 
+          loading="lazy"
+          className={hovered ? "lazy-loaded" : ""}/>
           {props.imageSrc2 && (
             <img
               src={props.imageSrc2}
