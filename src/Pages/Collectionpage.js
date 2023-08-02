@@ -12,7 +12,7 @@ import { getFirestore } from 'firebase/firestore';
 
 export default function CollectionPage() {
   const [products, setProducts] = useState([]);
-  const [sortBy, setSortBy] = useState(""); // Step 1
+  const [sortBy, setSortBy] = useState("views-trending");
   const navigate = useNavigate();
   const location = useLocation();
   const [isFetching, setIsFetching] = useState(true);
@@ -75,6 +75,8 @@ export default function CollectionPage() {
     sortedProducts.sort((a, b) => a.price - b.price); // Sort by price ascending
   } else if (sortBy === "price-high-to-low") {
     sortedProducts.sort((a, b) => b.price - a.price); // Sort by price descending
+  }else if (sortBy === "views-trending") {
+    sortedProducts.sort((a, b) => b.views - a.views); // Sort by views descending (Trending)
   }
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -124,7 +126,7 @@ export default function CollectionPage() {
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
                     >
-                      <option value="">None</option>
+                      <option value="">Popular</option>
                       <option value="price-low-to-high">Price (Low to High)</option>
                       <option value="price-high-to-low">Price (High to Low)</option>
                     </select>
