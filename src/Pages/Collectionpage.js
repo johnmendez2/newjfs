@@ -126,7 +126,7 @@ export default function CollectionPage() {
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
                     >
-                      <option value="">Popular</option>
+                      <option value="views-trending">Popular</option>
                       <option value="price-low-to-high">Price (Low to High)</option>
                       <option value="price-high-to-low">Price (High to Low)</option>
                     </select>
