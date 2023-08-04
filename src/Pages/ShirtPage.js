@@ -249,7 +249,7 @@ productsArray.forEach((product) => {
               {products.map((product) => (
                 <div className='squareboxforfeatured' style={{ padding: '10px', marginLeft: '25px', marginRight: '25px' }}>
                   <div class="square" onClick={() =>  {handleClick(product);}}>
-                    <img class="square-content" src={product.url} alt='featuredimage' />
+                    <img class="square-content" src={product.t1} alt='featuredimage' />
                   </div>
                   <h2 className='featuredcontenttext' style={{ textAlign: "center", fontSize: '1.2rem', minHeight: '42px' }}>{product.title}</h2>
                 </div>
