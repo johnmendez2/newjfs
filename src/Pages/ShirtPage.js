@@ -312,7 +312,7 @@ productsArray.forEach((product) => {
             <div className="squareboxforfeatured" key={product.id} style={{ padding: '10px' }}>
               <div className="square" style={{ height: '300px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Link to={`/${product.id}-${product.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-                <img className="square-content" style={{ height: '300px', maxWidth: '100%' }} src={product.url} alt="featuredimage" onClick={() => {handleClick(product.id)}}/>
+                <img className="square-content" style={{ height: '300px', maxWidth: '100%' }} src={product.t1} alt="featuredimage" onClick={() => {handleClick(product.id)}}/>
                 </Link>
               </div>
               <h2 className="featuredcontenttext" style={{ textAlign: 'center', fontSize: '16px', minHeight: '42px', width: '300px'  }}>{product.title}</h2>
