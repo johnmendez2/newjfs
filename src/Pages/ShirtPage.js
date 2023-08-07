@@ -222,7 +222,7 @@ export default function ShirtPage() {
             </h1>
             <ShowImg />
             <button className="depop-btn" onClick={() => window.open(prod.depopURL)}>BUY VIA DEPOP</button>
-            <button className="offer-btn" onClick={() => window.open('https://www.instagram.com/johnsfootballshirts/')}>
+            <button className="offer-btn" onClick={() => window.open('https://www.instagram.com/m/johnsfootballshirts/')}>
                   MAKE OFFER
                 </button>
 
