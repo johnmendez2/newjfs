@@ -45,7 +45,6 @@ export default function ProductCard(props) {
       setImageLoaded(true);
     };
   return (
-    <Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>
       <div
         className={`product-card ${hovered ? "hovered" : ""}`}
         onMouseEnter={handleMouseEnter}
@@ -60,6 +59,7 @@ export default function ProductCard(props) {
   </div>
         {/* Rest of the product card content */}
         <div className="product-image">
+        <Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>
           <img src={props.imageSrc} alt={props.productName} 
           loading="lazy"
           className={hovered ? "lazy-loaded" : ""}/>
@@ -70,8 +70,9 @@ export default function ProductCard(props) {
               className={`second-image ${hovered ? "show" : ""}`}
             />
           )}
+          </Link>
         </div>
-        <div className="product-name">{props.productName}</div>
+        <div className="product-name"><Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>{props.productName}</Link></div>
         <div className="product-size">{props.size}</div>
         {props.discountedPrice ? (
           <div className="product-price">
@@ -82,8 +83,7 @@ export default function ProductCard(props) {
           <div className="product-price">AED {props.price}</div>
         )}
         
-        <button className="view-details-btn">VIEW DETAILS</button>
-      </div>
-    </Link>
+        <button className="view-details-btn"><Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>VIEW DETAILS</Link></button>
+              </div>
   );
 }
