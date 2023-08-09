@@ -140,6 +140,7 @@ export default function CollectionPage() {
                     imageSrc={product.t1}
                     imageSrc2={product.t2} // Pass the second image URL prop
                     productName={product.title}
+                    condition={product.condition}
                     price={product.price}
                     views ={product.views}
                     discountedPrice={product.discountedPrice}

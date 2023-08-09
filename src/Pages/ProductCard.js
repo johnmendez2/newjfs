@@ -72,7 +72,7 @@ export default function ProductCard(props) {
           )}
           </Link>
         </div>
-        <div className="product-name"><Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>{props.productName}</Link></div>
+        <div className="product-name"><Link to={`${props.url}`} style={{ textDecoration: "none", color: "inherit" }}>{props.productName} {props.condition}</Link></div>
         <div className="product-size">{props.size}</div>
         {props.discountedPrice ? (
           <div className="product-price">
