@@ -137,8 +137,8 @@ export default function CollectionPage() {
                 currentProducts.map((product) => (
                   <ProductCard
                     key={product.id}
-                    imageSrc={product.t1}
-                    imageSrc2={product.t2} // Pass the second image URL prop
+                    imageSrc={product.thumbnailImages[0]} // Use the first thumbnail image URL
+                    imageSrc2={product.thumbnailImages[1]} // Use the second thumbnail image URL
                     productName={product.title}
                     condition={product.condition}
                     price={product.price}
