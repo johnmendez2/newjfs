@@ -120,7 +120,7 @@ function Homepage() {
 
         </Helmet>
             <div class='shippingmessage'>
-                Free shipping in the UAE on orders over AED 200!
+                Free shipping in the UAE on all orders until 16th September!
             </div>
             <div class="highlights">
                 <h1 className='featuretext' style={{fontSize: '30px', color: 'black', display: 'flex', marginLeft: '50px', paddingTop: '5px' ,paddingBottom: '10px'}}>

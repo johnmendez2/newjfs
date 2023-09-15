@@ -214,7 +214,7 @@ export default function ShirtPage() {
         <Navbar />
         {showFooter && <div className="mobile-layout">
           <div class='shippingmessage'>
-            Free shipping in the UAE on orders over AED 200!
+          Free shipping in the UAE on all orders until 16th September!
           </div>
           <div className="mobile-top">
             <h1 className="shirtname">
@@ -242,7 +242,7 @@ export default function ShirtPage() {
             </div>
             <h2>Shipping:</h2>
             <div className="description">
-              Delivery all over the UAE for AED 25. Free delivery on orders over AED 200.
+              Free shipping in the UAE on all orders until 16th September!
             </div>
           </div>
           <div class="highlights" style={{ height: '380px' }}>
