@@ -242,7 +242,7 @@ export default function ShirtPage() {
             </div>
             <h2>Shipping:</h2>
             <div className="description">
-              Free shipping in the UAE on all orders until 16th September!
+            Free shipping in the UAE on orders over AED 200!
             </div>
           </div>
           <div class="highlights" style={{ height: '380px' }}>
