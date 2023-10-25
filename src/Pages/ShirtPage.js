@@ -214,7 +214,7 @@ export default function ShirtPage() {
         <Navbar />
         {showFooter && <div className="mobile-layout">
           <div class='shippingmessage'>
-          Free shipping in the UAE on all orders until 16th September!
+          Free shipping in the UAE on orders over AED 200!
           </div>
           <div className="mobile-top">
             <h1 className="shirtname">
